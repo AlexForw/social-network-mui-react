@@ -1,13 +1,21 @@
 import './App.css'
-import { Button, styled, Typography } from '@mui/material'
-import { Settings } from '@mui/icons-material'
-import { fontSize } from '@mui/system';
+import Header from './components/Header/Header';
+import Leftbar from './components/Leftbar/Leftbar';
+import Main from './components/Main/Main';
+import Rightbar from './components/Rightbar/Rightbar';
+import { Stack } from '@mui/material';
 
 function App() {
 
   return (
     <div className="App">
-      Hello
+
+      <Header />
+      <Stack direction="row" gap="20px" justifyContent="space-between">
+        <Leftbar />
+        <Main />
+        <Rightbar />
+      </Stack>
     </div>
   );
 }
