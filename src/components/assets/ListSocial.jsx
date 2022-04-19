@@ -4,21 +4,20 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
 
 
-const ListSocial = () => {
+const ListSocial = ({ href, primary, icon }) => {
     return (
         <List>
-                <ListItem disablePadding>
-                    <ListItemButton component='a' href='#'>
-                        <ListItemIcon>
-                            <AccountBoxIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="My profile" />
-                    </ListItemButton>
-                </ListItem>
-            </List>
+            <ListItem disablePadding>
+                <ListItemButton component='a' href='#'>
+                    <ListItemIcon>
+                        {icon}
+                    </ListItemIcon>
+                    <ListItemText primary={primary} />
+                </ListItemButton>
+            </ListItem>
+        </List>
     );
 };
 
