@@ -16,7 +16,7 @@ import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
 const Post = ({img}) => {
     return (
-        <Card sx={{margin:{xs:1, sm:3, md:4}}}>
+        <Card sx={{marginBottom:{xs:1, sm:3, md:4},marginTop:{xs:1, sm:3, md:4}}}>
             <CardHeader
                 avatar={
                     <Avatar aria-label="recipe">
