@@ -16,7 +16,7 @@ const Rightbar = () => {
             <Box flex={4}>
 
                 <Box sx={{ mb: 2 }}>
-                    <ListWrapper titleText='News' href='javascript:'>
+                    <ListWrapper titleText='News' >
                         <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Photos' icon={<PhotoIcon />} />
                         <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Videos' icon={<OndemandVideoIcon />} />
                         <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Podcasts' icon={<HearingIcon />} />
@@ -25,10 +25,10 @@ const Rightbar = () => {
 
                 <Card>
                     <Box sx={{ fontSize: '20px', padding: 2, fontWeight: 500 }}>May be your Friend!</Box>
-                    <ListSocial href='javascript:' primary='Alan' icon={<Avatar />} optionalIcon={<AddIcon onClick={() => console.log(2)} sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
-                    <ListSocial href='javascript:' primary='Indus' icon={<Avatar />} optionalIcon={<AddIcon sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
-                    <ListSocial href='javascript:' primary='Grisha' icon={<Avatar />} optionalIcon={<AddIcon sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
-                    <ListSocial href='javascript:' primary='Alexey' icon={<Avatar />} optionalIcon={<AddIcon sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
+                    <ListSocial primary='Alan' icon={<Avatar />} optionalIcon={<AddIcon onClick={() => console.log(2)} sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
+                    <ListSocial primary='Indus' icon={<Avatar />} optionalIcon={<AddIcon sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
+                    <ListSocial primary='Grisha' icon={<Avatar />} optionalIcon={<AddIcon sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
+                    <ListSocial primary='Alexey' icon={<Avatar />} optionalIcon={<AddIcon sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
                 </Card>
 
             </Box>
