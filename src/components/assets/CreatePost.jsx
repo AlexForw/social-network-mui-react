@@ -6,15 +6,15 @@ import IconButton from '@mui/material/IconButton';
 import SendIcon from '@mui/icons-material/Send';
 import SentimentVerySatisfiedIcon from '@mui/icons-material/SentimentVerySatisfied';
 import DownloadIcon from '@mui/icons-material/Download';
-
+import ModalPage from './ModalPage';
 
 const CreatePost = () => {
     return (
         <Paper
-            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center'}}
+            sx={{ p: '2px 4px', display: {xs:'none', sm:'flex'}, alignItems: 'center'}}
         >
             <IconButton sx={{ p: '10px' }} aria-label="menu">
-                <DownloadIcon />
+                <ModalPage><DownloadIcon /></ModalPage>
             </IconButton>
             <InputBase
                 sx={{ ml: 1, flex: 1 }}
