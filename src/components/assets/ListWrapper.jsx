@@ -7,7 +7,7 @@ import ExpandMore from '@mui/icons-material/ExpandMore';
 
 
 
-const ListWrapper = ({children, titleText}) => {
+const ListWrapper = ({children, titleText, href}) => {
     const [open, setOpen] = React.useState(true);
 
     const handleClick = () => {
@@ -16,7 +16,7 @@ const ListWrapper = ({children, titleText}) => {
 
     return (
         <Box>
-            <ListSocial primary={titleText} onClickWrapper={handleClick} optionalIcon={open ? <ExpandLess /> : <ExpandMore />}/>
+            <ListSocial href={href} primary={titleText} onClickWrapper={handleClick} optionalIcon={open ? <ExpandLess /> : <ExpandMore />}/>
             <Collapse in={open} timeout="auto" unmountOnExit>
                 {children}
             </Collapse>

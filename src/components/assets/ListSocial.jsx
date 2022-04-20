@@ -10,7 +10,7 @@ const ListSocial = ({ href, primary, icon, optionalIcon, onClickWrapper, sx }) =
     return (
         <List sx={sx}>
             <ListItem disablePadding onClick={onClickWrapper}>
-                <ListItemButton component='a' href='#'>
+                <ListItemButton component='a' href={href}>
                     <ListItemIcon>
                         {icon}
                     </ListItemIcon>
