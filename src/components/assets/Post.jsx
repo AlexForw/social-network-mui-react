@@ -14,9 +14,9 @@ import { MoreVert } from '@mui/icons-material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
-const Post = ({img}) => {
+const Post = ({ img }) => {
     return (
-        <Card sx={{marginBottom:{xs:1, sm:3, md:4},marginTop:{xs:1, sm:3, md:4}}}>
+        <Card sx={{ marginBottom: { xs: 1, sm: 3, md: 4 }, marginTop: { xs: 1, sm: 3, md: 4 } }}>
             <CardHeader
                 avatar={
                     <Avatar aria-label="recipe">
@@ -46,7 +46,7 @@ const Post = ({img}) => {
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
-                <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite sx={{color:'red'}}/>} />
+                    <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite sx={{ color: 'red' }} />} />
                 </IconButton>
                 <IconButton aria-label="share">
                     <ShareIcon />
