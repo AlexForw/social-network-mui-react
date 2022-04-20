@@ -17,12 +17,9 @@ import Fab from '@mui/material/Fab';
 
 
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
+    transform: 'translate(50%, 30%)',
     width: '50vw',
-    height: '45vh',
+    height: '70vh',
     color: 'text.primary',
     bgcolor: 'background.paper',
     border: '2px solid #000',
@@ -76,7 +73,7 @@ const ModalPage = ({ children }) => {
                             </IconButton>
                         </Box>
 
-                        <Fab>
+                        <Fab onClick={handleClose}>
                             <SendIcon/>
                         </Fab>
                     </Box>
