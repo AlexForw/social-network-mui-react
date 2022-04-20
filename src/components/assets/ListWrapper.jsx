@@ -12,7 +12,7 @@ import StarBorder from '@mui/icons-material/StarBorder';
 
 
 
-const ListWrapper = ({typographyText, titleText}) => {
+const ListWrapper = ({children, titleText}) => {
     const [open, setOpen] = React.useState(true);
 
     const handleClick = () => {
@@ -23,7 +23,7 @@ const ListWrapper = ({typographyText, titleText}) => {
         <Box>
             <ListSocial primary={titleText} onClickWrapper={handleClick} optionalIcon={open ? <ExpandLess /> : <ExpandMore />}/>
             <Collapse in={open} timeout="auto" unmountOnExit>
-                <ListSocial primary={typographyText}/>
+                {children}
             </Collapse>
         </Box>
     );
