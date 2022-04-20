@@ -6,10 +6,11 @@ import Main from './components/Main/Main';
 import Rightbar from './components/Rightbar/Rightbar';
 import { Stack } from '@mui/material';
 import { createTheme,ThemeProvider } from '@mui/material';
+import { Box } from '@mui/system';
 
 function App() {
 
-  const [mode, setMode] = React.useState('dark')
+  const [mode, setMode] = React.useState('light')
 
   const darkTheme = createTheme({
     palette:{
@@ -20,14 +21,14 @@ function App() {
   return (
   <ThemeProvider theme={darkTheme}>
     
-      <div className="App">
-        <Header />
+      <Box bgcolor={'background.default'} color={'text.primary'} className="App">
+        <Header mode={mode} setMode={setMode}/>
         <Stack direction="row" gap="20px" justifyContent="space-between">
           <Leftbar />
           <Main />
           <Rightbar />
         </Stack>
-      </div>
+      </Box>
   </ThemeProvider>
   );
 }

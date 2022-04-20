@@ -50,9 +50,10 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
 }));
 
-const SwitchTime = () => {
+const SwitchTime = ({mode, setMode}) => {
     return (
         <FormControlLabel
+            onChange={() => setMode(mode === 'light' ? 'dark' : 'light')}
             control={<MaterialUISwitch />} // the Moon will defaultChecked
         />
     );

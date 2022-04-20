@@ -7,7 +7,7 @@ import Burger from '../assets/Burger';
 import SwitchTime from '../assets/SwitchTime';
 
 
-const Header = () => {
+const Header = ({mode, setMode}) => {
     return (
 
         <AppBar position='sticky'>
@@ -20,7 +20,7 @@ const Header = () => {
                 <AccessibilityNew fontSize='large' sx={{ display: { xs:'none',sm: 'block', md: 'none' } }} />
                 <Search />
                 <Box display='flex' alignItems='center'>
-                    <Box><SwitchTime /></Box>
+                    <Box><SwitchTime mode={mode} setMode={setMode}/></Box>
                     <AccountIcon />
                 </Box>
             </Toolbar>
