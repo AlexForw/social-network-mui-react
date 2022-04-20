@@ -24,7 +24,7 @@ const Rightbar = () => {
                 </Box>
 
                 <Card>
-                    <Box sx={{ fontSize: '20px', padding: 2, fontWeight: 500 }}>May be your Friend!</Box>
+                    <Box sx={{ fontSize: '20px', padding: 2, fontWeight: 500 }}>People you may know:</Box>
                     <ListSocial primary='Alan' icon={<Avatar />} optionalIcon={<AddIcon onClick={() => console.log(2)} sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
                     <ListSocial primary='Indus' icon={<Avatar />} optionalIcon={<AddIcon sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
                     <ListSocial primary='Grisha' icon={<Avatar />} optionalIcon={<AddIcon sx={{ '&:hover': { transition: 'all 0.4s ease-in', color: 'green', transform: 'scale(1.36)', fontWeight: '900' }, '&:active': { transition: 'all 0.2s ease-in', transform: 'scale(0.8)' } }} />} />
