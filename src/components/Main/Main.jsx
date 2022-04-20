@@ -1,10 +1,12 @@
 import { Box } from '@mui/material';
 import React from 'react';
+import Post from '../assets/Post'
+
 
 const Main = () => {
     return (
-        <Box backgroundColor="green" flex={4} p={2}>
-                Center
+        <Box flex={4} p={2}>
+                <Post />
         </Box>
     );
 };
