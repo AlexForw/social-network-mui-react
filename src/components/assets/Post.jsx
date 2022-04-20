@@ -1,5 +1,4 @@
 import React from 'react';
-import { Box } from '@mui/material';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -12,10 +11,12 @@ import Typography from '@mui/material/Typography';
 import Favorite from '@mui/icons-material/Favorite';
 import ShareIcon from '@mui/icons-material/Share';
 import { MoreVert } from '@mui/icons-material';
+import Checkbox from '@mui/material/Checkbox';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
-const Post = () => {
+const Post = ({img}) => {
     return (
-        <Box><Card>
+        <Card sx={{margin:{xs:1, sm:3, md:4}}}>
             <CardHeader
                 avatar={
                     <Avatar aria-label="recipe">
@@ -32,20 +33,20 @@ const Post = () => {
             />
             <CardMedia
                 component="img"
-                height="20%"
-                image="https://www.flydubai.com/ru/media/Tel-Aviv-2560x960_tcm10-161005.jpg"
-                alt="Paella dish"
+                height="30%"
+                width="100"
+                image={img}
+                alt="City"
             />
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    This impressive paella is a perfect party dish and a fun meal to cook
-                    together with your guests. Add 1 cup of frozen peas along with the mussels,
-                    if you like.
+                    This is awesome city - Telaviv. It looks like a Moscow with the same amount of muslums.
+                    My Brother Artem want to visit this city and land there. I think this place is really beautiful.
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
-                    <Favorite />
+                <Checkbox icon={<FavoriteBorder />} checkedIcon={<Favorite sx={{color:'red'}}/>} />
                 </IconButton>
                 <IconButton aria-label="share">
                     <ShareIcon />
@@ -53,7 +54,7 @@ const Post = () => {
 
             </CardActions>
 
-        </Card></Box>
+        </Card>
     );
 };
 

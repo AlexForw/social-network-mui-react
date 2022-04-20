@@ -17,9 +17,9 @@ const Header = () => {
             }}>
                 <Burger />
                 <Box p={2} sx={{ display: { xs: 'none', md: 'block' }, fontSize: '24px' }}>Shelter</Box>
-                <AccessibilityNew fontSize='large' sx={{ display: { sm: 'block', md: 'none' } }} />
+                <AccessibilityNew fontSize='large' sx={{ display: { xs:'none',sm: 'block', md: 'none' } }} />
                 <Search />
-                <Box display='flex' alignItems='center' gap='10px'>
+                <Box display='flex' alignItems='center'>
                     <Box><SwitchTime /></Box>
                     <AccountIcon />
                 </Box>

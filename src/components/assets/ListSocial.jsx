@@ -6,7 +6,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
 
-const ListSocial = ({ href, primary, icon }) => {
+const ListSocial = ({ href, primary, icon, addIcon }) => {
     return (
         <List>
             <ListItem disablePadding>
@@ -15,6 +15,9 @@ const ListSocial = ({ href, primary, icon }) => {
                         {icon}
                     </ListItemIcon>
                     <ListItemText primary={primary} />
+                    <ListItemIcon>
+                        {addIcon}
+                    </ListItemIcon>
                 </ListItemButton>
             </ListItem>
         </List>

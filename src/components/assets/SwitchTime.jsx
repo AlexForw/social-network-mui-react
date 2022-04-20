@@ -53,7 +53,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 const SwitchTime = () => {
     return (
         <FormControlLabel
-            control={<MaterialUISwitch sx={{ m: 1 }}/>} // the Moon will defaultChecked
+            control={<MaterialUISwitch />} // the Moon will defaultChecked
         />
     );
 };
