@@ -11,7 +11,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 const CreatePost = () => {
     return (
         <Paper
-            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 400 }}
+            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center'}}
         >
             <IconButton sx={{ p: '10px' }} aria-label="menu">
                 <DownloadIcon />

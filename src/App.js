@@ -14,8 +14,18 @@ function App() {
 
   const darkTheme = createTheme({
     palette:{
-      mode:mode
-    }
+      mode:mode,
+    },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 480,
+        md: 768,
+        bmd:1024,
+        lg: 1280,
+        xl: 1536,
+      },
+    },
   })
 
   return (
@@ -23,7 +33,7 @@ function App() {
     
       <Box bgcolor={'background.default'} color={'text.primary'} className="App">
         <Header mode={mode} setMode={setMode}/>
-        <Stack direction="row" gap="20px" justifyContent="space-between">
+        <Stack direction="row" justifyContent="space-between">
           <Leftbar />
           <Main />
           <Rightbar />

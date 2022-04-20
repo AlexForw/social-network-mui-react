@@ -11,7 +11,7 @@ import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 
 const Rightbar = () => {
     return (
-        <Box flex={2} p={2} sx={{ display: { xs: 'none', md: 'block' } }}>
+        <Box flex={2} p={2} sx={{ display: { xs: 'none', bmd: 'block' } }}>
 
             <Box flex={4}>
 

@@ -9,13 +9,15 @@ import GroupsIcon from '@mui/icons-material/Groups';
 
 const Leftbar = () => {
     return (
-        <Box flex={1} p={2} sx={{ display: { xs: 'none', md: 'block' } }}>
-            <Box position='fixed'>
+        <Box flex={1} p={2} sx={{ display: { xs: 'none', md: 'block' }, marginRight:{xs:8,bmd:10} }}>
+            <Box >
+                <Box position='fixed'>
                 <ListSocial href='#' icon={<AccountBoxIcon />} primary='My profile'></ListSocial>
                 <ListSocial href='#' icon={<NewspaperIcon />} primary='News'></ListSocial>
                 <ListSocial href='#' icon={<ChatBubbleOutlineIcon />} primary='Messenger'></ListSocial>
                 <ListSocial href='#' icon={<GroupIcon />} primary='Friends'></ListSocial>
                 <ListSocial href='#' icon={<GroupsIcon />} primary='Groups'></ListSocial>
+            </Box>
             </Box>
         </Box>
     );
