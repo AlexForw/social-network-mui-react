@@ -18,7 +18,6 @@ function App() {
   const [kindOfNews, setKindOfNews] = React.useState('hatke')
 
   const [searchNews,setSearchNews] = React.useState('')   // For search by word in header Input
-  console.log(searchNews)
 
   const [mode, setMode] = React.useState('light')
 

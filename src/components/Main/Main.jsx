@@ -24,7 +24,6 @@ const Main = ({createNews, newsArr, kindOfNews, searchNews}) => {
     
     
     useEffect(()=>{
-        console.log(kindOfNews)
         createNews(kindOfNews)
                                 // solve problem with useEffect
 
