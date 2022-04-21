@@ -10,14 +10,14 @@ import Leftbar from '../Leftbar/Leftbar';
 const Burger = () => {
     const [open,setOpen] = React.useState(false)
     return (
-        <Box>
-            <Button ><MenuIcon onClick={()=> setOpen(true)} color='white'/></Button>
+        <Box sx={{display:{xs:'block', md:'none'}}}>
+            <Button sx={{color:'white'}}><MenuIcon onClick={()=> setOpen(true)} /></Button>
             <SwipeableDrawer
                 open={open}
                 onOpen={()=> setOpen(true)}
                 onClose={()=> setOpen(false)}
             >
-                <List>{<Leftbar />}</List>
+                <List sx={{width:'250px', overflow:'scroll'}}>{<Leftbar />}</List>
             </SwipeableDrawer>
 
         </Box>
