@@ -1,20 +1,42 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Post from '../assets/Post'
 import CreatePost from '../assets/CreatePost';
 // import NewsApi from '../APIs/NewsApi';
 
+// all
+// national //Indian News only
+// business
+// sports
+// world
+// politics
+// technology
+// startup
+// entertainment
+// miscellaneous
+// hatke
+// science
+// automobile
+
+
 
 const Main = () => {
-    const API = 'https://inshortsapi.vercel.app/news?category'
-
-
+    const API = 'https://inshortsapi.vercel.app/news?category'  // news API
+    const [newsArr, setNewsArr] = useState([])
+    
     const createNews = async (target) => {
         const resp = await fetch(`${API}=${target}`)
-        const data = await resp.json()
-        console.log(data)
+        const news = await resp.json()
+        setNewsArr(news.data)
+        console.log(newsArr)
     }
-    createNews('science')
+    
+    useEffect(()=>{
+        createNews('sport')
+
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps 
+      }, [])
     return (
         <Box flex={4} p={2}>
 
@@ -22,8 +44,7 @@ const Main = () => {
 
             <CreatePost />
             <Box>
-                <Post img="https://www.flydubai.com/ru/media/Tel-Aviv-2560x960_tcm10-161005.jpg" />
-                <Post img="https://upload.wikimedia.org/wikipedia/commons/9/98/Hashalom_interchange.jpg" />
+                {newsArr.map((elem,i)=> <Post key={elem + i} props={elem}/>)}
             </Box>
         </Box>
     );

@@ -14,7 +14,7 @@ import { MoreVert } from '@mui/icons-material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 
-const Post = ({ img }) => {
+const Post = ({ props }) => {
     return (
         <Card sx={{ marginBottom: { xs: 1, sm: 3, md: 4 }, marginTop: { xs: 1, sm: 3, md: 4 } }}>
             <CardHeader
@@ -28,20 +28,19 @@ const Post = ({ img }) => {
                         <MoreVert />
                     </IconButton>
                 }
-                title="Artemka how is your Ivrit"
-                subheader="April 20, 2022"
+                title={props.author}
+                subheader={props.date + ' ' + props.time}
             />
             <CardMedia
                 component="img"
                 height="30%"
                 width="100"
-                image={img}
+                image={props.imageUrl}
                 alt="City"
             />
             <CardContent>
                 <Typography variant="body2" color="text.secondary">
-                    This is awesome city - Telaviv. It looks like a Moscow with the same amount of muslums.
-                    My Brother Artem want to visit this city and land there. I think this place is really beautiful.
+                {props.content}
                 </Typography>
             </CardContent>
             <CardActions disableSpacing>
