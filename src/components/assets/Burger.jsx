@@ -1,4 +1,4 @@
-import { IconButton, List } from '@mui/material';
+import { List } from '@mui/material';
 
 import * as React from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,7 +17,7 @@ const Burger = () => {
                 onOpen={()=> setOpen(true)}
                 onClose={()=> setOpen(false)}
             >
-                <List sx={{width:'250px', overflow:'scroll'}}>{<Leftbar />}</List>
+                <List sx={{width:'250px'}}>{<Leftbar />}</List>
             </SwipeableDrawer>
 
         </Box>
