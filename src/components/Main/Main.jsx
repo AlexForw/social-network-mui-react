@@ -33,9 +33,9 @@ const Main = () => {
     
     useEffect(()=>{
         createNews('sport')
+                                // solve problem with useEffect
 
-
-        // eslint-disable-next-line react-hooks/exhaustive-deps 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
       }, [])
     return (
         <Box flex={4} p={2}>

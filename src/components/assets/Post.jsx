@@ -39,9 +39,11 @@ const Post = ({ props }) => {
                 alt="City"
             />
             <CardContent>
+                <Typography variant='h6'>{props.title}</Typography>
                 <Typography variant="body2" color="text.secondary">
                 {props.content}
                 </Typography>
+                <IconButton >Read more</IconButton>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">
