@@ -6,9 +6,9 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
 
-const ListSocial = ({primary, icon, optionalIcon, onClickWrapper, sx }) => {
+const ListSocial = ({primary, icon, optionalIcon, onClickWrapper, sx, onClick}) => {
     return (
-        <List sx={sx}>
+        <List sx={sx} onClick={onClick}>
             <ListItem disablePadding onClick={onClickWrapper}>
                 <ListItemButton>
                     <ListItemIcon>

@@ -29,7 +29,7 @@ const Main = ({createNews, newsArr, kindOfNews}) => {
                                 // solve problem with useEffect
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-      },[])
+      },[kindOfNews])
     return (
         <Box flex={4} p={2}>
 

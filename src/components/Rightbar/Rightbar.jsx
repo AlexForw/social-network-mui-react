@@ -19,18 +19,18 @@ import TimeToLeaveOutlinedIcon from '@mui/icons-material/TimeToLeaveOutlined';
 
 
 
-const Rightbar = () => {
+const Rightbar = ({setKindOfNews}) => {
     return (
         <Box flex={2} p={2} sx={{ display: { xs: 'none', bmd: 'block' } }}>
 
             <Box flex={4}>
 
                 <Box sx={{ mb: 2 }}>
-                        <ListSocial primary='Podcasts' icon={<HearingIcon />} />
-                        <ListSocial primary='Photos' icon={<PhotoIcon />} />
-                        <ListSocial primary='Videos' icon={<OndemandVideoIcon />} />
+                    <ListSocial primary='Podcasts' icon={<HearingIcon />} />
+                    <ListSocial primary='Photos' icon={<PhotoIcon />} />
+                    <ListSocial primary='Videos' icon={<OndemandVideoIcon />} />
                     <ListWrapper titleText='News' >
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Business' icon={<PaidOutlinedIcon />} />
+                        <ListSocial onClick={() => setKindOfNews('business')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Business' icon={<PaidOutlinedIcon />} />
                         <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Sport' icon={<SportsBasketballOutlinedIcon />} />
                         <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='World' icon={<PublicOutlinedIcon />} />
                         <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Politics' icon={<GavelOutlinedIcon />} />

@@ -15,7 +15,7 @@ function App() {
 
   const API = 'https://inshortsapi.vercel.app/news?category'  // news API
   const [newsArr, setNewsArr] = React.useState([])
-  const [kindOfNews, setKindOfNews] = React.useState('all')
+  const [kindOfNews, setKindOfNews] = React.useState('hatke')
 
   const [mode, setMode] = React.useState('light')
 
