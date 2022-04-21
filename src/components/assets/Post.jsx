@@ -45,7 +45,7 @@ const Post = ({ props }) => {
                 <Typography variant="body2" color="text.secondary">
                     {props.content}
                 </Typography>
-                <IconButton variant='a' target="_blank" href={props.readMoreUrl}>Read more</IconButton>
+                <IconButton variant='a' sx={{borderRadius:3, mt:2}} target="_blank" href={props.readMoreUrl}>Read more</IconButton>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">

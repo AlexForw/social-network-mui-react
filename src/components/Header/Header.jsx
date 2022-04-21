@@ -1,11 +1,10 @@
-import { AppBar, Box, Toolbar } from '@mui/material';
+import { AppBar, Box, Toolbar, IconButton } from '@mui/material';
 import React from 'react';
 import { AccessibilityNew } from '@mui/icons-material';
 import Search from '../assets/Search';
 import AccountIcon from '../assets/AccountIcon'
 import Burger from '../assets/Burger';
 import SwitchTime from '../assets/SwitchTime';
-
 
 const Header = ({mode, setMode, setSearchNews}) => {
 
@@ -18,7 +17,7 @@ const Header = ({mode, setMode, setSearchNews}) => {
                 justifyContent: 'space-between',
             }}>
                 <Burger />
-                <Box p={2} variant='a' href='#'sx={{ display: { xs: 'none', md: 'block' }, fontSize: '24px' }}>Shelter</Box>
+                <IconButton p={2} variant='a' href='#' sx={{ color:'white',borderRadius:3,display: { xs: 'none', md: 'block' }, fontSize: '24px', cursor:'pointer' }}>Shelter</IconButton>
                 <AccessibilityNew fontSize='large' sx={{ display: { xs:'none',sm: 'block', md: 'none' } }} />
                 <Search onChange={e => setSearchNews(e.target.value)}/>
                 <Box display='flex' alignItems='center'>
