@@ -1,5 +1,4 @@
 import React from 'react';
-import AccountCircle from '@mui/icons-material/AccountCircle';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -15,13 +14,14 @@ import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import { Divider } from '@mui/material';
 
+
 const Post = ({ props }) => {
     return (
         <Card sx={{ marginBottom: { xs: 1, sm: 3, md: 4 }, marginTop: { xs: 1, sm: 3, md: 4 } }}>
             <CardHeader
                 avatar={
                     <Avatar aria-label="recipe">
-                        <AccountCircle />
+                        {props.author.split(' ')[0].slice(0,1) + props.author.split(' ')[1].slice(0,1)}
                     </Avatar>
                 }
                 action={
