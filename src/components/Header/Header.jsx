@@ -7,7 +7,9 @@ import Burger from '../assets/Burger';
 import SwitchTime from '../assets/SwitchTime';
 
 
-const Header = ({mode, setMode}) => {
+const Header = ({mode, setMode, setSearchNews}) => {
+
+
     return (
 
         <AppBar position='sticky'>
@@ -18,7 +20,7 @@ const Header = ({mode, setMode}) => {
                 <Burger />
                 <Box p={2} variant='a' href='#'sx={{ display: { xs: 'none', md: 'block' }, fontSize: '24px' }}>Shelter</Box>
                 <AccessibilityNew fontSize='large' sx={{ display: { xs:'none',sm: 'block', md: 'none' } }} />
-                <Search />
+                <Search onChange={e => setSearchNews(e.target.value)}/>
                 <Box display='flex' alignItems='center'>
                     <Box><SwitchTime mode={mode} setMode={setMode}/></Box>
                     <AccountIcon />

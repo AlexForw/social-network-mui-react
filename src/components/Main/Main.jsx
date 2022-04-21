@@ -20,7 +20,7 @@ import CreatePost from '../assets/CreatePost';
 
 
 
-const Main = ({createNews, newsArr, kindOfNews}) => {
+const Main = ({createNews, newsArr, kindOfNews, searchNews}) => {
     
     
     useEffect(()=>{
@@ -30,6 +30,7 @@ const Main = ({createNews, newsArr, kindOfNews}) => {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
       },[kindOfNews])
+      console.log(newsArr.filter(text => text.title.includes(searchNews)))
     return (
         <Box flex={4} p={2}>
 

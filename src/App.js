@@ -17,6 +17,9 @@ function App() {
   const [newsArr, setNewsArr] = React.useState([])
   const [kindOfNews, setKindOfNews] = React.useState('hatke')
 
+  const [searchNews,setSearchNews] = React.useState('')   // For search by word in header Input
+  console.log(searchNews)
+
   const [mode, setMode] = React.useState('light')
 
   const darkTheme = createTheme({
@@ -46,10 +49,10 @@ function App() {
     <ThemeProvider theme={darkTheme}>
 
       <Box bgcolor={'background.default'} color={'text.primary'} className="App">
-        <Header mode={mode} setMode={setMode} />
+        <Header mode={mode} setMode={setMode} setSearchNews={setSearchNews}/>
         <Stack direction="row" justifyContent="space-between">
           <Leftbar />
-          <Main createNews={createNews} kindOfNews={kindOfNews} newsArr={newsArr} />
+          <Main createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} />
           <Rightbar createNews={createNews} newsArr={newsArr} setKindOfNews={setKindOfNews}/>
         </Stack>
       </Box>
