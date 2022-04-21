@@ -1,20 +1,28 @@
-import React from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
-import { IconButton } from '@mui/material';
+import { IconButton, List } from '@mui/material';
 
+import * as React from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
+import Box from '@mui/material/Box';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Button from '@mui/material/Button';
+import Leftbar from '../Leftbar/Leftbar';
 
 const Burger = () => {
+    const [open,setOpen] = React.useState(false)
     return (
-        <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2, display: { xs: 'block', md: 'none' } }}
-        >
-            <MenuIcon />
-        </IconButton>
-    );
-};
+        <Box>
+            <Button ><MenuIcon onClick={()=> setOpen(true)} color='white'/></Button>
+            <SwipeableDrawer
+                open={open}
+                onOpen={()=> setOpen(true)}
+                onClose={()=> setOpen(false)}
+            >
+                <List>{<Leftbar />}</List>
+            </SwipeableDrawer>
 
-export default Burger;
+        </Box>
+    );
+}
+
+
+export default Burger

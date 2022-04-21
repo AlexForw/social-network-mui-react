@@ -7,9 +7,9 @@ import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import GroupIcon from '@mui/icons-material/Group';
 import GroupsIcon from '@mui/icons-material/Groups';
 
-const Leftbar = () => {
+const Leftbar = ({sx}) => {
     return (
-        <Box flex={1} p={2} sx={{ display: { xs: 'none', md: 'block' }, marginRight:{xs:8,bmd:10} }}>
+        <Box flex={1} p={2} sx={sx}>
             <Box >
                 <Box position='fixed'>
                 <ListSocial href='#' icon={<AccountBoxIcon />} primary='My profile'></ListSocial>

@@ -50,7 +50,7 @@ function App() {
       <Box bgcolor={'background.default'} color={'text.primary'} className="App">
         <Header mode={mode} setMode={setMode} setSearchNews={setSearchNews}/>
         <Stack direction="row" justifyContent="space-between">
-          <Leftbar />
+          <Leftbar sx={{ display: { xs: 'none', md: 'block' }, marginRight:{xs:8,bmd:10} }}/>
           <Main createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} />
           <Rightbar createNews={createNews} newsArr={newsArr} setKindOfNews={setKindOfNews}/>
         </Stack>
