@@ -30,7 +30,6 @@ const Main = ({createNews, newsArr, kindOfNews, searchNews}) => {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
       },[kindOfNews])
-      console.log(newsArr.filter(text => text.title.includes(searchNews)))
     return (
         <Box flex={4} p={2}>
 
@@ -38,7 +37,10 @@ const Main = ({createNews, newsArr, kindOfNews, searchNews}) => {
 
             <CreatePost />
             <Box>
-                {newsArr.map((elem,i)=> <Post key={elem + i} props={elem}/>)}
+                {newsArr.filter(text => text.title.toLowerCase().includes(searchNews.toLowerCase()) ||
+                text.content.toLowerCase().includes(searchNews.toLowerCase()) ||
+                text.author.toLowerCase().includes(searchNews.toLowerCase()))
+                .map((elem,i)=> <Post key={elem + i} props={elem}/>)}
             </Box>
         </Box>
     );
