@@ -8,6 +8,16 @@ import ListWrapper from '../assets/ListWrapper';
 import HearingIcon from '@mui/icons-material/Hearing';
 import PhotoIcon from '@mui/icons-material/Photo';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
+import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
+import SportsBasketballOutlinedIcon from '@mui/icons-material/SportsBasketballOutlined';
+import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
+import GavelOutlinedIcon from '@mui/icons-material/GavelOutlined';
+import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
+import AttractionsOutlinedIcon from '@mui/icons-material/AttractionsOutlined';
+import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
+import TimeToLeaveOutlinedIcon from '@mui/icons-material/TimeToLeaveOutlined';
+
+
 
 const Rightbar = () => {
     return (
@@ -16,10 +26,18 @@ const Rightbar = () => {
             <Box flex={4}>
 
                 <Box sx={{ mb: 2 }}>
+                        <ListSocial primary='Podcasts' icon={<HearingIcon />} />
+                        <ListSocial primary='Photos' icon={<PhotoIcon />} />
+                        <ListSocial primary='Videos' icon={<OndemandVideoIcon />} />
                     <ListWrapper titleText='News' >
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Photos' icon={<PhotoIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Videos' icon={<OndemandVideoIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Podcasts' icon={<HearingIcon />} />
+                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Business' icon={<PaidOutlinedIcon />} />
+                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Sport' icon={<SportsBasketballOutlinedIcon />} />
+                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='World' icon={<PublicOutlinedIcon />} />
+                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Politics' icon={<GavelOutlinedIcon />} />
+                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Technology' icon={<ComputerOutlinedIcon />} />
+                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Entertainment' icon={<AttractionsOutlinedIcon />} />
+                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Science' icon={<PsychologyOutlinedIcon />} />
+                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Cars' icon={<TimeToLeaveOutlinedIcon />} />
                     </ListWrapper>
                 </Box>
 
