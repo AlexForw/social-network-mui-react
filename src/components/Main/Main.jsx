@@ -2,11 +2,23 @@ import { Box } from '@mui/material';
 import React from 'react';
 import Post from '../assets/Post'
 import CreatePost from '../assets/CreatePost';
+// import NewsApi from '../APIs/NewsApi';
+
 
 const Main = () => {
+    const API = 'https://inshortsapi.vercel.app/news?category'
+
+
+    const createNews = async (target) => {
+        const resp = await fetch(`${API}=${target}`)
+        const data = await resp.json()
+        console.log(data)
+    }
+    createNews('science')
     return (
         <Box flex={4} p={2}>
 
+            {/* <NewsApi /> */}
 
             <CreatePost />
             <Box>
