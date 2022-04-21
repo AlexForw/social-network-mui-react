@@ -13,6 +13,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import { MoreVert } from '@mui/icons-material';
 import Checkbox from '@mui/material/Checkbox';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import { Divider } from '@mui/material';
 
 const Post = ({ props }) => {
     return (
@@ -40,10 +41,11 @@ const Post = ({ props }) => {
             />
             <CardContent>
                 <Typography variant='h6'>{props.title}</Typography>
+                <Divider sx={{ height:5, m: 0.5 }} orientation="horizontal" />
                 <Typography variant="body2" color="text.secondary">
-                {props.content}
+                    {props.content}
                 </Typography>
-                <IconButton >Read more</IconButton>
+                <IconButton variant='a' target="_blank" href={props.readMoreUrl}>Read more</IconButton>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">

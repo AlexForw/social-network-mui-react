@@ -16,7 +16,7 @@ const Header = ({mode, setMode}) => {
                 justifyContent: 'space-between',
             }}>
                 <Burger />
-                <Box p={2} sx={{ display: { xs: 'none', md: 'block' }, fontSize: '24px' }}>Shelter</Box>
+                <Box p={2} variant='a' href='#'sx={{ display: { xs: 'none', md: 'block' }, fontSize: '24px' }}>Shelter</Box>
                 <AccessibilityNew fontSize='large' sx={{ display: { xs:'none',sm: 'block', md: 'none' } }} />
                 <Search />
                 <Box display='flex' alignItems='center'>

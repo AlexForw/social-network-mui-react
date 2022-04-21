@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import Post from '../assets/Post'
 import CreatePost from '../assets/CreatePost';
 // import NewsApi from '../APIs/NewsApi';
@@ -20,23 +20,16 @@ import CreatePost from '../assets/CreatePost';
 
 
 
-const Main = () => {
-    const API = 'https://inshortsapi.vercel.app/news?category'  // news API
-    const [newsArr, setNewsArr] = useState([])
+const Main = ({createNews, newsArr, kindOfNews}) => {
     
-    const createNews = async (target) => {
-        const resp = await fetch(`${API}=${target}`)
-        const news = await resp.json()
-        setNewsArr(news.data)
-        console.log(newsArr)
-    }
     
     useEffect(()=>{
-        createNews('sport')
+        console.log(kindOfNews)
+        createNews(kindOfNews)
                                 // solve problem with useEffect
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
-      }, [])
+      },[])
     return (
         <Box flex={4} p={2}>
 
