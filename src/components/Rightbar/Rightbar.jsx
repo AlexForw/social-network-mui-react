@@ -31,13 +31,13 @@ const Rightbar = ({setKindOfNews}) => {
                     <ListSocial primary='Videos' icon={<OndemandVideoIcon />} />
                     <ListWrapper titleText='News' >
                         <ListSocial onClick={() => setKindOfNews('business')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Business' icon={<PaidOutlinedIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Sport' icon={<SportsBasketballOutlinedIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='World' icon={<PublicOutlinedIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Politics' icon={<GavelOutlinedIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Technology' icon={<ComputerOutlinedIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Entertainment' icon={<AttractionsOutlinedIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Science' icon={<PsychologyOutlinedIcon />} />
-                        <ListSocial sx={{ pl: 4, pt: 0, pb: 0 }} primary='Cars' icon={<TimeToLeaveOutlinedIcon />} />
+                        <ListSocial onClick={() => setKindOfNews('sports')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Sport' icon={<SportsBasketballOutlinedIcon />} />
+                        <ListSocial onClick={() => setKindOfNews('world')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='World' icon={<PublicOutlinedIcon />} />
+                        <ListSocial onClick={() => setKindOfNews('politics')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Politics' icon={<GavelOutlinedIcon />} />
+                        <ListSocial onClick={() => setKindOfNews('technology')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Technology' icon={<ComputerOutlinedIcon />} />
+                        <ListSocial onClick={() => setKindOfNews('entertainment')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Entertainment' icon={<AttractionsOutlinedIcon />} />
+                        <ListSocial onClick={() => setKindOfNews('science')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Science' icon={<PsychologyOutlinedIcon />} />
+                        <ListSocial onClick={() => setKindOfNews('automobile')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Cars' icon={<TimeToLeaveOutlinedIcon />} />
                     </ListWrapper>
                 </Box>
 
