@@ -2,10 +2,13 @@ import './App.css'
 import React from 'react';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { Box } from '@mui/system';
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout/Layout';
 import Home from './components/pages/Home/Home';
-
+import MyProfile from './components/pages/MyProfile/MyProfile'
+import Messenger from './components/pages/Messenger/Messenger';
+import Groups from './components/pages/Groups/Groups';
+import Friends from './components/pages/Friends/Friends';
 
 function App() {
 
@@ -47,6 +50,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews}/>}>
             <Route index element={<Home createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} setKindOfNews={setKindOfNews}/>}/>
+            <Route path='/myprofile' element={<MyProfile />}/>
+            <Route path='/messenger' element={<Messenger />}/>
+            <Route path='/groups' element={<Groups />}/>
+            <Route path='/friends' element={<Friends />}/>
           </Route>
         </Routes>
       </Box>
