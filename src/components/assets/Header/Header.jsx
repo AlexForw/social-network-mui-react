@@ -1,10 +1,10 @@
 import { AppBar, Box, Toolbar, IconButton } from '@mui/material';
 import React from 'react';
 import { AccessibilityNew } from '@mui/icons-material';
-import Search from '../assets/Search';
-import AccountIcon from '../assets/AccountIcon'
-import Burger from '../assets/Burger';
-import SwitchTime from '../assets/SwitchTime';
+import Search from '../Search';
+import AccountIcon from '../AccountIcon'
+import Burger from '../Burger';
+import SwitchTime from '../SwitchTime';
 
 const Header = ({mode, setMode, setSearchNews}) => {
 

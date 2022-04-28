@@ -1,13 +1,11 @@
 import './App.css'
 import React from 'react';
-import Header from './components/Header/Header';
-import Leftbar from './components/Leftbar/Leftbar';
 import Main from './components/Main/Main';
 import Rightbar from './components/Rightbar/Rightbar';
-import { Stack } from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { Box } from '@mui/system';
-
+import { Routes, Route, Link } from 'react-router-dom'
+import Layout from './components/Layout/Layout';
 
 
 
@@ -17,7 +15,7 @@ function App() {
   const [newsArr, setNewsArr] = React.useState([])
   const [kindOfNews, setKindOfNews] = React.useState('hatke')
 
-  const [searchNews,setSearchNews] = React.useState('')   // For search by word in header Input
+  const [searchNews, setSearchNews] = React.useState('')   // For search by word in header Input
 
   const [mode, setMode] = React.useState('light')
 
@@ -46,14 +44,14 @@ function App() {
 
   return (
     <ThemeProvider theme={darkTheme}>
-
       <Box bgcolor={'background.default'} color={'text.primary'} className="App">
-        <Header mode={mode} setMode={setMode} setSearchNews={setSearchNews}/>
-        <Stack direction="row" justifyContent="space-between">
-          <Leftbar sx={{ display: { xs: 'none', md: 'block' }, marginRight:{xs:8,bmd:10} }}/>
-          <Main createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} />
-          <Rightbar createNews={createNews} newsArr={newsArr} setKindOfNews={setKindOfNews}/>
-        </Stack>
+
+        <Routes>
+          <Route path='/' element={<Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews}/>}>
+            <Main createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} />
+            <Rightbar createNews={createNews} newsArr={newsArr} setKindOfNews={setKindOfNews} />
+          </Route>
+        </Routes>
       </Box>
     </ThemeProvider>
   );
