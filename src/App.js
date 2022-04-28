@@ -1,7 +1,5 @@
 import './App.css'
 import React from 'react';
-import Main from './components/Main/Main';
-import Rightbar from './components/Rightbar/Rightbar';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { Box } from '@mui/system';
 import { Routes, Route, Link } from 'react-router-dom'
@@ -48,8 +46,7 @@ function App() {
 
         <Routes>
           <Route path='/' element={<Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews}/>}>
-            <Main createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} />
-            <Rightbar createNews={createNews} newsArr={newsArr} setKindOfNews={setKindOfNews} />
+            <Route index element={<Home createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} setKindOfNews={setKindOfNews}/>}/>
           </Route>
         </Routes>
       </Box>

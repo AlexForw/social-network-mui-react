@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import React, { useEffect} from 'react';
-import Post from '../assets/Post'
-import CreatePost from '../assets/CreatePost';
+import Post from '../Post'
+import CreatePost from '../CreatePost';
 // import NewsApi from '../APIs/NewsApi';
 
 // all
@@ -20,7 +20,7 @@ import CreatePost from '../assets/CreatePost';
 
 
 
-const Main = ({createNews, newsArr, kindOfNews, searchNews}) => {
+const NewsWrapper = ({createNews, newsArr, kindOfNews, searchNews}) => {
     
     
     useEffect(()=>{
@@ -45,4 +45,4 @@ const Main = ({createNews, newsArr, kindOfNews, searchNews}) => {
     );
 };
 
-export default Main;
+export default NewsWrapper;

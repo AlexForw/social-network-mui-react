@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './components/assets/Header/Header';
+import Header from '../assets/Header/Header';
 import { Stack } from '@mui/material';
-import Leftbar from './components/Leftbar/Leftbar';
+import Leftbar from '../assets/Leftbar/Leftbar';
 import { Outlet } from 'react-router-dom';
 
 

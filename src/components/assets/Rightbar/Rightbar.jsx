@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import ListSocial from '../assets/ListSocial'
+import ListSocial from '../ListSocial'
 import Avatar from '@mui/material/Avatar';
 import AddIcon from '@mui/icons-material/Add';
 import Card from '@mui/material/Card';
-import ListWrapper from '../assets/ListWrapper';
+import ListWrapper from '../ListWrapper';
 import HearingIcon from '@mui/icons-material/Hearing';
 import PhotoIcon from '@mui/icons-material/Photo';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
