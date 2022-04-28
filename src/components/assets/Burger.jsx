@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Box from '@mui/material/Box';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Button from '@mui/material/Button';
-import Leftbar from '../Leftbar/Leftbar';
+import Leftbar from './Leftbar/Leftbar';
 
 const Burger = () => {
     const [open,setOpen] = React.useState(false)

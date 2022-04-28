@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider } from '@mui/material';
 import { Box } from '@mui/system';
 import { Routes, Route, Link } from 'react-router-dom'
 import Layout from './components/Layout/Layout';
-
+import Home from './components/pages/Home/Home';
 
 
 function App() {

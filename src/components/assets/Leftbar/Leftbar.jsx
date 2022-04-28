@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import ListSocial from '../assets/ListSocial'
+import ListSocial from '../ListSocial'
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';

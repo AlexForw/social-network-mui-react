@@ -2,22 +2,6 @@ import { Box } from '@mui/material';
 import React, { useEffect} from 'react';
 import Post from '../Post'
 import CreatePost from '../CreatePost';
-// import NewsApi from '../APIs/NewsApi';
-
-// all
-// national //Indian News only
-// business
-// sports
-// world
-// politics
-// technology
-// startup
-// entertainment
-// miscellaneous
-// hatke
-// science
-// automobile
-
 
 
 const NewsWrapper = ({createNews, newsArr, kindOfNews, searchNews}) => {

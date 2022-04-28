@@ -1,11 +1,11 @@
 import React from 'react';
-import NewsWrapper from './components/assets/NewsWrapper/NewsWrapper';
-import Rightbar from './components/assets/Rightbar/Rightbar';
+import NewsWrapper from '../../assets/NewsWrapper/NewsWrapper';
+import Rightbar from '../../assets/Rightbar/Rightbar';
 
 
 
 
-const Home = () => {
+const Home = ({createNews, newsArr, kindOfNews, searchNews, setKindOfNews}) => {
     return (
         <>
             <NewsWrapper createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} />
