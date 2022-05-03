@@ -10,8 +10,6 @@ import PhotoIcon from '@mui/icons-material/Photo';
 import OndemandVideoIcon from '@mui/icons-material/OndemandVideo';
 import PaidOutlinedIcon from '@mui/icons-material/PaidOutlined';
 import SportsBasketballOutlinedIcon from '@mui/icons-material/SportsBasketballOutlined';
-import PublicOutlinedIcon from '@mui/icons-material/PublicOutlined';
-import GavelOutlinedIcon from '@mui/icons-material/GavelOutlined';
 import ComputerOutlinedIcon from '@mui/icons-material/ComputerOutlined';
 import AttractionsOutlinedIcon from '@mui/icons-material/AttractionsOutlined';
 import PsychologyOutlinedIcon from '@mui/icons-material/PsychologyOutlined';
@@ -32,8 +30,6 @@ const Rightbar = ({setKindOfNews}) => {
                     <ListWrapper titleText='News' >
                         <ListSocial onClick={() => setKindOfNews('business')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Business' icon={<PaidOutlinedIcon />} />
                         <ListSocial onClick={() => setKindOfNews('sports')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Sport' icon={<SportsBasketballOutlinedIcon />} />
-                        <ListSocial onClick={() => setKindOfNews('world')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='World' icon={<PublicOutlinedIcon />} />
-                        <ListSocial onClick={() => setKindOfNews('politics')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Politics' icon={<GavelOutlinedIcon />} />
                         <ListSocial onClick={() => setKindOfNews('technology')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Technology' icon={<ComputerOutlinedIcon />} />
                         <ListSocial onClick={() => setKindOfNews('entertainment')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Entertainment' icon={<AttractionsOutlinedIcon />} />
                         <ListSocial onClick={() => setKindOfNews('science')} sx={{ pl: 4, pt: 0, pb: 0 }} primary='Science' icon={<PsychologyOutlinedIcon />} />
