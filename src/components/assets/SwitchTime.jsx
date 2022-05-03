@@ -62,7 +62,7 @@ const changeColor = () => {
     return (
         <FormControlLabel
             onChange={() => setMode(changeColor)}
-            control={<MaterialUISwitch />} // the Moon will defaultChecked
+            control={mode === 'light' ? <MaterialUISwitch /> : <MaterialUISwitch checked/>} // the Moon will defaultChecked
         />
     );
 };
