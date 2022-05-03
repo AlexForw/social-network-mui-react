@@ -51,9 +51,17 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 const SwitchTime = ({mode, setMode}) => {
+const changeColor = () => {
+    let newModeArr = []
+    newModeArr.push(JSON.parse(localStorage.getItem('mode')).slice(-1).join('') === 'light' ? 'dark' : 'light')
+    localStorage.setItem('mode', JSON.stringify(newModeArr))
+   
+    return JSON.parse(localStorage.getItem('mode')).slice(-1).join('')
+    
+}
     return (
         <FormControlLabel
-            onChange={() => setMode(mode === 'light' ? 'dark' : 'light')}
+            onChange={() => setMode(changeColor)}
             control={<MaterialUISwitch />} // the Moon will defaultChecked
         />
     );
