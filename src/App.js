@@ -9,6 +9,8 @@ import MyProfile from './components/pages/MyProfile/MyProfile'
 import Messenger from './components/pages/Messenger/Messenger';
 import Groups from './components/pages/Groups/Groups';
 import Friends from './components/pages/Friends/Friends';
+import Login from './components/pages/Login/Login';
+import Register from './components/pages/Register/Register'
 
 function App() {
 
@@ -50,6 +52,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews}/>}>
             <Route index element={<Home createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} setKindOfNews={setKindOfNews}/>}/>
+            <Route path='/login' element={<Login />}/>
+            <Route path='/register' element={<Register />}/>
             <Route path='/myprofile' element={<MyProfile />}/>
             <Route path='/messenger' element={<Messenger />}/>
             <Route path='/groups' element={<Groups />}/>
