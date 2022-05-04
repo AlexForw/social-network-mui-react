@@ -30,6 +30,8 @@ const Login = ({setUserName}) => {
         }catch (error){
           console.log(error.message);
         }
+        setLoginEmail('')
+        setLoginPassword('')
       }
 
     return (
@@ -39,8 +41,8 @@ const Login = ({setUserName}) => {
             </Box>
             <Card sx={{ width: '400px', height: '400px', display: 'flex', flexDirection: 'column', gap: 3 }}>
                 <Typography variant='h4' sx={{ textAlign: 'center', marginTop: 5 }}>Login</Typography>
-                <Search text={'Email..'} icon={<AlternateEmailOutlinedIcon />} onChange={e => setLoginEmail(e.target.value)} />
-                <Search text={'Password..'} icon={<LockOutlinedIcon />} onChange={e => setLoginPassword(e.target.value)} />
+                <Search text={'Email..'} icon={<AlternateEmailOutlinedIcon />} value={loginEmail} onChange={e => setLoginEmail(e.target.value)} />
+                <Search text={'Password..'} icon={<LockOutlinedIcon />} value={loginPassword} onChange={e => setLoginPassword(e.target.value)} />
                 <Button variant="contained" onClick={login} sx={{ width: '200px', alignSelf: 'center', marginTop: 5 }}>Sign in</Button>
 
                 <Box sx={{ display: 'flex', justifyContent: 'center', color: '#4682B4', fontWeight: '900' }}>

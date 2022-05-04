@@ -10,17 +10,17 @@ import { createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'fir
 import { auth } from '../../../firebase-config'
 
 
-const Register = ({setUserName,userName}) => {
+const Register = ({ setUserName, userName }) => {
 
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('')
 
 
-    onAuthStateChanged(auth, (currentUser) =>{
+    onAuthStateChanged(auth, (currentUser) => {
         if (currentUser) {
-          setUserName(currentUser)
+            setUserName(currentUser)
         }
-      })
+    })
 
     const register = async () => {
         try {
@@ -33,10 +33,10 @@ const Register = ({setUserName,userName}) => {
         setRegisterPassword('')
     }
 
-    const logout = async () =>{
+    const logout = async () => {
         await signOut(auth)
         setUserName({})
-      }
+    }
 
     return (
         <Box height='100vh' p={3} sx={{ display: 'flex', justifyContent: 'space-around' }}>
