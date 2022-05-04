@@ -61,6 +61,10 @@ function App() {
     setNewsArr(news.data)
   }
 
+
+  const [userName, setUserName] = useState({})  // Register part
+
+
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor={'background.default'} color={'text.primary'} className="App">
