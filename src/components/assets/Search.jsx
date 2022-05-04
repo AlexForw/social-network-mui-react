@@ -1,6 +1,5 @@
 import { InputBase } from '@mui/material';
 import React from 'react';
-import SearchIcon from '@mui/icons-material/Search';
 import { styled, alpha } from '@mui/material/styles';
 
 
@@ -45,14 +44,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 
-const Search = ({onChange}) => {
+const Search = ({onChange,icon, text}) => {
     return (
         <SearchBox>
             <SearchIconWrapper>
-                <SearchIcon />
+                {icon}
             </SearchIconWrapper>
             <StyledInputBase
-                placeholder="Search by word.."
+                placeholder={text}
                 inputProps={{ 'aria-label': 'search' }}
                 onChange={onChange}
             />
