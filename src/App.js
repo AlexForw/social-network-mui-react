@@ -78,7 +78,7 @@ function App() {
             <Route path='/friends' element={<Friends />} />
           </Route>
           <Route path='/' element={<LayoutForm mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
-            <Route path='/register' element={<Register />} />
+            <Route path='/register' element={<Register setUserName={setUserName} userName={userName} />} />
             <Route path='/login' element={<Login />} />
           </Route>
         </Routes>
