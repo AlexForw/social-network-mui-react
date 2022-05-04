@@ -79,7 +79,7 @@ function App() {
           </Route>
           <Route path='/' element={<LayoutForm mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
             <Route path='/register' element={<Register setUserName={setUserName} userName={userName} />} />
-            <Route path='/login' element={<Login />} />
+            <Route path='/login' element={<Login setUserName={setUserName}/>} />
           </Route>
         </Routes>
       </Box>
