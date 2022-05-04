@@ -1,10 +1,13 @@
 import React from 'react';
+import { Box } from '@mui/material';
+
+
 
 const Register = () => {
     return (
-        <div>
+        <Box height='100vh'>
             Register Form
-        </div>
+        </Box>
     );
 };
 
