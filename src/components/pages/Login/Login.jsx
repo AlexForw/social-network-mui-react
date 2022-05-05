@@ -8,15 +8,17 @@ import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlin
 import { Link, Navigate } from 'react-router-dom'
 import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../../firebase-config'
-import { useContext } from 'react';
-import AuthContext from '../../context/AuthProvider';
 import useAuth from '../../assets/hooks/useAuth';
-
+import { useNavigate, useLocation} from 'react-router-dom';
 
 
 const Login = ({setUserName, userName }) => {
 
     const { setAuthUser } = useAuth()
+
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
 
     onAuthStateChanged(auth, (currentUser) => {
         if (currentUser) {
@@ -32,6 +34,8 @@ const Login = ({setUserName, userName }) => {
         try {
             const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
             console.log(user)
+            setAuthUser({loginEmail,loginPassword})
+            navigate(from, {replace:true})
         } catch (error) {
             console.log(error.message);
         }

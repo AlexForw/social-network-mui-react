@@ -5,23 +5,21 @@ import Search from '../../assets/Search';
 import Button from '@mui/material/Button';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../../../firebase-config'
 
 
 const Register = ({ setUserName, userName }) => {
-
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('')
-
-
+    
     onAuthStateChanged(auth, (currentUser) => {
         if (currentUser) {
             setUserName(currentUser)
         }
     })
-
+    
     const register = async () => {
         try {
             const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
