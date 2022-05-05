@@ -16,7 +16,7 @@ import useAuth from '../../assets/hooks/useAuth';
 
 const Login = ({setUserName, userName }) => {
 
-    const { setAuth } = useAuth
+    const { setAuthUser } = useAuth()
 
     onAuthStateChanged(auth, (currentUser) => {
         if (currentUser) {
