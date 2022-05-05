@@ -5,14 +5,16 @@ import Search from '../../assets/Search';
 import Button from '@mui/material/Button';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../../firebase-config'
 import useAuth from '../../assets/hooks/useAuth';
-import { useNavigate, useLocation} from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import Bowl from '../../animations/Bowl';
 
 
-const Login = ({setUserName, userName }) => {
+
+const Login = ({ setUserName }) => {
 
     const { setAuthUser } = useAuth()
 
@@ -33,8 +35,8 @@ const Login = ({setUserName, userName }) => {
     const login = async () => {
         try {
             const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
-            setAuthUser({user})
-            navigate(from, {replace:true})
+            setAuthUser({ user })
+            navigate(from, { replace: true })
         } catch (error) {
             console.log(error.message);
         }
@@ -44,9 +46,9 @@ const Login = ({setUserName, userName }) => {
 
     return (
         <Box height='100vh' p={3} sx={{ display: 'flex', justifyContent: 'space-around' }}>
-            <Box sx={{ backgroundColor: 'red', width: '300px' }}>
-                Animation
-            </Box>
+
+            <Bowl />
+
             <Card sx={{ width: '400px', height: '400px', display: 'flex', flexDirection: 'column', gap: 3 }}>
                 <Typography variant='h4' sx={{ textAlign: 'center', marginTop: 5 }}>Login</Typography>
                 <Search text={'Email..'} icon={<AlternateEmailOutlinedIcon />} value={loginEmail} onChange={e => setLoginEmail(e.target.value)} />
