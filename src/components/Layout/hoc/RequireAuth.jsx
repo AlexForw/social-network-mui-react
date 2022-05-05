@@ -20,7 +20,7 @@ const RequireAuth = () => {
         localStorage.setItem('storage',JSON.stringify(storage))
     }
     return (
-        JSON.parse(localStorage.getItem('storage')) ? <Outlet /> : <Navigate to='/login' state={{ from: location }} replace />
+        localStorage.getItem('storage') ? <Outlet /> : <Navigate to='/login' state={{ from: location }} replace />
     )
 }
 export default RequireAuth;
