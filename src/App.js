@@ -67,17 +67,15 @@ function App() {
       <Box bgcolor={'background.default'} color={'text.primary'} className="App">
 
         <Routes>
-          <Route path='/' element={
-            <RequireAuth>
-              <Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews} />
-            </RequireAuth>
-          }>
-            <Route index element={<Home createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} setKindOfNews={setKindOfNews} />} />
-            <Route path='/myprofile' element={<MyProfile />} />
-            <Route path='/messenger' element={<Messenger />} />
-            <Route path='/groups' element={<Groups />} />
-            <Route path='/friends' element={<Friends />} />
-          </Route>
+          <Route element={<RequireAuth />}>
+            <Route path='/' element={<Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
+              <Route index element={<Home createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} setKindOfNews={setKindOfNews} />} />
+              <Route path='/myprofile' element={<MyProfile />} />
+              <Route path='/messenger' element={<Messenger />} />
+              <Route path='/groups' element={<Groups />} />
+              <Route path='/friends' element={<Friends />} />
+            </Route>
+        </Route>
           <Route path='/' element={<LayoutForm mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
             <Route path='/register' element={<Register setUserName={setUserName} userName={userName} />} />
             <Route path='/login' element={<Login setUserName={setUserName} userName={userName} />} />

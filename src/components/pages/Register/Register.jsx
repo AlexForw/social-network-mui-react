@@ -5,25 +5,36 @@ import Search from '../../assets/Search';
 import Button from '@mui/material/Button';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
-import { Link, Navigate } from 'react-router-dom'
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../../../firebase-config'
+import useAuth from '../../assets/hooks/useAuth';
 
 
 const Register = ({ setUserName, userName }) => {
+
+    const { setAuthUser } = useAuth()
+
+    const navigate = useNavigate()
+    const location = useLocation()
+    const from = location.state?.from?.pathname || '/'
+
+
+
     const [registerEmail, setRegisterEmail] = useState('')
     const [registerPassword, setRegisterPassword] = useState('')
-    
+
     onAuthStateChanged(auth, (currentUser) => {
         if (currentUser) {
             setUserName(currentUser)
         }
     })
-    
+
     const register = async () => {
         try {
             const user = await createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
-            console.log(user);
+            setAuthUser({ user })
+            navigate(from, { replace: true })
         } catch (error) {
             console.log(error.message);
         }
@@ -46,7 +57,7 @@ const Register = ({ setUserName, userName }) => {
             <Card sx={{ width: '400px', height: '400px', display: 'flex', flexDirection: 'column', gap: 3 }}>
                 <Typography variant='h4' sx={{ textAlign: 'center', marginTop: 5 }}>Register</Typography>
                 <Search text={'Email..'} icon={<AlternateEmailOutlinedIcon />} value={registerEmail} onChange={e => setRegisterEmail(e.target.value)} />
-                <Search text={'Password..'} icon={<LockOutlinedIcon />} value={registerPassword} onChange={e => setRegisterPassword(e.target.value)} />
+                <Search type='password' text={'Password..'} icon={<LockOutlinedIcon />} value={registerPassword} onChange={e => setRegisterPassword(e.target.value)} />
                 <Button variant="contained" onClick={register} sx={{ width: '200px', alignSelf: 'center', marginTop: 5 }}>Sign up</Button>
 
                 <Box sx={{ display: 'flex', justifyContent: 'center', color: '#4682B4', fontWeight: '900' }}>
