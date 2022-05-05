@@ -5,34 +5,39 @@ import Search from '../../assets/Search';
 import Button from '@mui/material/Button';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import AlternateEmailOutlinedIcon from '@mui/icons-material/AlternateEmailOutlined';
-import { Link } from 'react-router-dom'
-import { onAuthStateChanged, signInWithEmailAndPassword} from 'firebase/auth'
+import { Link, Navigate } from 'react-router-dom'
+import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth'
 import { auth } from '../../../firebase-config'
+import { useContext } from 'react';
+import AuthContext from '../../context/AuthProvider';
+import useAuth from '../../assets/hooks/useAuth';
 
 
 
-const Login = ({setUserName}) => {
+const Login = ({setUserName, userName }) => {
 
-    onAuthStateChanged(auth, (currentUser) =>{
+    const { setAuth } = useAuth
+
+    onAuthStateChanged(auth, (currentUser) => {
         if (currentUser) {
-          setUserName(currentUser)
+            setUserName(currentUser)
         }
-      })
+    })
 
 
     const [loginEmail, setLoginEmail] = useState('')
     const [loginPassword, setLoginPassword] = useState('')
 
-    const login = async () =>{
-        try{
-          const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
-          console.log(user);
-        }catch (error){
-          console.log(error.message);
+    const login = async () => {
+        try {
+            const user = await signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+            console.log(user)
+        } catch (error) {
+            console.log(error.message);
         }
         setLoginEmail('')
         setLoginPassword('')
-      }
+    }
 
     return (
         <Box height='100vh' p={3} sx={{ display: 'flex', justifyContent: 'space-around' }}>

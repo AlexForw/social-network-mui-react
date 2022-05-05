@@ -12,7 +12,7 @@ import Friends from './components/pages/Friends/Friends';
 import Login from './components/pages/Login/Login';
 import Register from './components/pages/Register/Register'
 import LayoutForm from './components/Layout/LayoutForm';
-
+import RequireAuth from './components/Layout/hoc/RequireAuth';
 
 
 function App() {
@@ -34,7 +34,6 @@ function App() {
   // } //
 
   const [mode, setMode] = useState(JSON.parse(localStorage.getItem('mode')).slice(-1).join(''))
-  console.log(mode);
 
 
 
@@ -63,14 +62,16 @@ function App() {
 
 
   const [userName, setUserName] = useState({})  // Register part
-
-
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor={'background.default'} color={'text.primary'} className="App">
 
         <Routes>
-          <Route path='/' element={<Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
+          <Route path='/' element={
+            <RequireAuth>
+              <Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews} />
+            </RequireAuth>
+          }>
             <Route index element={<Home createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} setKindOfNews={setKindOfNews} />} />
             <Route path='/myprofile' element={<MyProfile />} />
             <Route path='/messenger' element={<Messenger />} />
@@ -79,7 +80,7 @@ function App() {
           </Route>
           <Route path='/' element={<LayoutForm mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
             <Route path='/register' element={<Register setUserName={setUserName} userName={userName} />} />
-            <Route path='/login' element={<Login setUserName={setUserName}/>} />
+            <Route path='/login' element={<Login setUserName={setUserName} userName={userName} />} />
           </Route>
         </Routes>
       </Box>
