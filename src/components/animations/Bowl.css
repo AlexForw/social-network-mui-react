@@ -5,6 +5,7 @@
 }
 
 .bowl__wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +20,28 @@
     background-color: rgba(45, 45, 92, 0.2);
     border-radius: 50%;
     border: 8px solid transparent;
+    transform-origin: bottom center;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        filter: hue-rotate(0deg);
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+        transform: rotate(0deg);
+    }
 }
 
 .bowl::before {
@@ -56,6 +79,26 @@
     border-bottom-left-radius: 150px;
     border-bottom-right-radius: 150px;
     filter: drop-shadow(0 0 80px #41c1fb);
+    transform-origin: top center;
+    animation: animateFluid 5s linear infinite;
+}
+
+@keyframes animateFluid{
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
 }
 
 .fluid::before {
@@ -71,11 +114,30 @@
 
 .bowl__shadow {
     position: absolute;
-    top: calc(50% + 150px);
-    left: 50%;
+    top: calc(46% + 150px);
+    /* left: 50%; */
     transform: translate(-50%,-50%);
     width: 300px;
     height: 30px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+    animation: animateShadow 5s linear infinite;
+}
+
+@keyframes animateShadow{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(70px);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    75%{
+        transform: translateX(-70px);
+    }
+    100%{
+        transform: translateX(0);
+    }
 }

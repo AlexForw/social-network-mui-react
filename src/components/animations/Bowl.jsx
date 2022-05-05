@@ -4,8 +4,8 @@ import './Bowl.css'
 const Bowl = () => {
     return (
         <section className='bowl__wrapper'>
+            <div className="bowl__shadow"></div>
             <div className="bowl">
-                <div className="bowl__shadow"></div>
                 <div className="fluid">
 
                 </div>
