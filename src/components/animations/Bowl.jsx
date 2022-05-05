@@ -1,7 +1,7 @@
 import './Bowl.css'
 
 
-const Bowl = () => {
+const Bowl = ({title}) => {
     return (
         <section className='bowl__wrapper'>
             <div className="bowl__shadow"></div>
@@ -10,6 +10,7 @@ const Bowl = () => {
 
                 </div>
             </div>
+            <div className='bowl__text'>Login..</div>
         </section>
     );
 };

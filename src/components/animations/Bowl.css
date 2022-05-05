@@ -141,3 +141,21 @@
         transform: translateX(0);
     }
 }
+
+.bowl__text{
+    position: absolute;
+    bottom: -50px;
+    font-size: 32px;
+    font-weight: 900;
+    animation: animateText 5s linear infinite;
+    color: #41c1fb;
+}
+
+@keyframes animateText{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
