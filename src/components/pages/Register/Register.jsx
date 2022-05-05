@@ -9,6 +9,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { createUserWithEmailAndPassword, onAuthStateChanged, signOut } from 'firebase/auth'
 import { auth } from '../../../firebase-config'
 import useAuth from '../../assets/hooks/useAuth';
+import Bowl from '../../animations/Bowl';
+
 
 
 const Register = ({ setUserName, userName }) => {
@@ -49,12 +51,9 @@ const Register = ({ setUserName, userName }) => {
 
     return (
         <Box height='100vh' p={3} sx={{ display: 'flex', justifyContent: 'space-around' }}>
-            <Box sx={{ backgroundColor: 'red', width: '300px' }}>
-                Animation
-                <h2>User Logged in: {userName?.email} </h2>
-                <button className='button' onClick={logout}>Sign out</button>
-            </Box>
-            <Card sx={{ width: '400px', height: '400px', display: 'flex', flexDirection: 'column', gap: 3 }}>
+            <Bowl title='Register..' />
+
+            <Card sx={{ width: '400px', height: '400px', display: 'flex', flexDirection: 'column', gap: 3, borderRadius: '50px' }}>
                 <Typography variant='h4' sx={{ textAlign: 'center', marginTop: 5 }}>Register</Typography>
                 <Search text={'Email..'} icon={<AlternateEmailOutlinedIcon />} value={registerEmail} onChange={e => setRegisterEmail(e.target.value)} />
                 <Search type='password' text={'Password..'} icon={<LockOutlinedIcon />} value={registerPassword} onChange={e => setRegisterPassword(e.target.value)} />

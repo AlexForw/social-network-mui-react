@@ -47,11 +47,11 @@ const Login = ({ setUserName }) => {
     return (
         <Box height='100vh' p={3} sx={{ display: 'flex', justifyContent: 'space-around' }}>
 
-            <Bowl />
+            <Bowl title='Login..' />
 
-            <Card sx={{ width: '400px', height: '400px', display: 'flex', flexDirection: 'column', gap: 3 }}>
+            <Card sx={{ width: '400px', height: '400px', display: 'flex', flexDirection: 'column', gap: 3, borderRadius: '50px' }}>
                 <Typography variant='h4' sx={{ textAlign: 'center', marginTop: 5 }}>Login</Typography>
-                <Search text={'Email..'} icon={<AlternateEmailOutlinedIcon />} value={loginEmail} onChange={e => setLoginEmail(e.target.value)} />
+                <Search type='text' text={'Email..'} icon={<AlternateEmailOutlinedIcon />} value={loginEmail} onChange={e => setLoginEmail(e.target.value)} />
                 <Search type='password' text={'Password..'} icon={<LockOutlinedIcon />} value={loginPassword} onChange={e => setLoginPassword(e.target.value)} />
                 <Button variant="contained" onClick={login} sx={{ width: '200px', alignSelf: 'center', marginTop: 5 }}>Sign in</Button>
 

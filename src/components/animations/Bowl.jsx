@@ -10,7 +10,7 @@ const Bowl = ({title}) => {
 
                 </div>
             </div>
-            <div className='bowl__text'>Login..</div>
+            <div className='bowl__text'>{title}</div>
         </section>
     );
 };
