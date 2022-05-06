@@ -6,7 +6,7 @@ import Menu from '@mui/material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
-
+import SignOut from './SignOut/SignOut';
 
 const AccountIcon = ({hidden}) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -46,9 +46,9 @@ const AccountIcon = ({hidden}) => {
             onClose={handleMenuClose}
         >
             <MenuItem ></MenuItem>
-            <MenuItem onClick={handleMenuClose}>My account</MenuItem>
+            <MenuItem onClick={handleMenuClose}>My profile</MenuItem>
             <MenuItem ><SettingsIcon /><Box paddingLeft='5px'>Settings</Box></MenuItem>
-            <MenuItem><LogoutIcon /><Box paddingLeft='5px'>Sign out</Box></MenuItem>
+            <MenuItem onClick={SignOut}><LogoutIcon /><Box paddingLeft='5px'>Sign out</Box></MenuItem>
         </Menu>
     );
 

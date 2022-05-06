@@ -10,10 +10,9 @@ const RequireAuth = () => {
     if(localStorage.getItem('storage') === null) {                         // If values from key 'todo' is empty
         storage = []                                                       // Create array 'todo'
     }else{
-        storage = JSON.parse(localStorage.getItem('storage'))                 // Rewrite array in 'todo' from local storage
+        storage = JSON.parse(localStorage.getItem('storage'))                // Rewrite array in 'todo' from local storage
     }
 
-    console.log(storage);
     
     if(authUser?.user?._tokenResponse?.email){
         storage.push(authUser?.user?._tokenResponse?.email)
