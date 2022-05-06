@@ -13,6 +13,7 @@ import Login from './components/pages/Login/Login';
 import Register from './components/pages/Register/Register'
 import LayoutForm from './components/Layout/LayoutForm';
 import RequireAuth from './components/Layout/hoc/RequireAuth';
+import Settings from './components/pages/Settings/Settings';
 
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
               <Route path='/messenger' element={<Messenger />} />
               <Route path='/groups' element={<Groups />} />
               <Route path='/friends' element={<Friends />} />
+              <Route path='/settings' element={<Settings />} />
             </Route>
         </Route>
           <Route path='/' element={<LayoutForm mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>

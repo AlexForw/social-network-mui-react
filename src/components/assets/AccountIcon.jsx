@@ -7,6 +7,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SignOut from './SignOut/SignOut';
+import { Link } from 'react-router-dom'
 
 const AccountIcon = ({hidden}) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -46,9 +47,18 @@ const AccountIcon = ({hidden}) => {
             onClose={handleMenuClose}
         >
             <MenuItem ></MenuItem>
-            <MenuItem onClick={handleMenuClose}>My profile</MenuItem>
-            <MenuItem ><SettingsIcon /><Box paddingLeft='5px'>Settings</Box></MenuItem>
-            <MenuItem onClick={SignOut}><LogoutIcon /><Box paddingLeft='5px'>Sign out</Box></MenuItem>
+            <Link to='/myprofile'>
+                <MenuItem onClick={handleMenuClose}>My profile</MenuItem>
+            </Link>
+            <Link to='/settings'>
+                <MenuItem onClick={handleMenuClose}><SettingsIcon /><Box paddingLeft='5px'>Settings</Box></MenuItem>
+            </Link>
+            <Link to='/login'>
+                <MenuItem onClick={() =>{
+                    SignOut()
+                    handleMenuClose()
+                    }}><LogoutIcon /><Box paddingLeft='5px'>Sign out</Box></MenuItem>
+            </Link>
         </Menu>
     );
 
