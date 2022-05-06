@@ -8,7 +8,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 
 
-const AccountIcon = () => {
+const AccountIcon = ({hidden}) => {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -87,7 +87,7 @@ const AccountIcon = () => {
     );
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box hidden={hidden} sx={{ flexGrow: 1 }}>
 
 
             <IconButton

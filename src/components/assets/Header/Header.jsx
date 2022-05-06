@@ -8,7 +8,7 @@ import SwitchTime from '../SwitchTime';
 import SearchIcon from '@mui/icons-material/Search';
 
 
-const Header = ({mode, setMode, setSearchNews}) => {
+const Header = ({mode, setMode, setSearchNews, hidden}) => {
 
 
     return (
@@ -24,7 +24,7 @@ const Header = ({mode, setMode, setSearchNews}) => {
                 <Search text={'Search by word..'} icon={<SearchIcon />} onChange={e => setSearchNews(e.target.value)}/>
                 <Box display='flex' alignItems='center'>
                     <Box><SwitchTime mode={mode} setMode={setMode}/></Box>
-                    <AccountIcon />
+                    <AccountIcon hidden={hidden}/>
                 </Box>
             </Toolbar>
         </AppBar>

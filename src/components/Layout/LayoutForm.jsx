@@ -7,7 +7,7 @@ import { Outlet } from 'react-router-dom';
 const LayoutForm = ({mode, setMode, setSearchNews}) => {
     return (
         <>
-          <Header mode={mode} setMode={setMode} setSearchNews={setSearchNews} />
+          <Header hidden='hidden' mode={mode} setMode={setMode} setSearchNews={setSearchNews} />
             <Outlet />
         </>
     );
