@@ -47,7 +47,7 @@ function App() {
         xs: 0,
         sm: 480,
         md: 768,
-        bmd: 1024,
+        bmd: 1042,
         lg: 1280,
         xl: 1536,
       },
