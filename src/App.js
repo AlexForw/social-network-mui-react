@@ -18,7 +18,7 @@ import Settings from './components/pages/Settings/Settings';
 
 function App() {
 
-  const API = 'https://inshortsapi.vercel.app/news?category'  // news API
+  const API = 'https://inshorts.deta.dev/news?category'  // news API
   const [newsArr, setNewsArr] = useState([])
   const [kindOfNews, setKindOfNews] = useState('hatke')
 
@@ -26,7 +26,7 @@ function App() {
 
   let modeArr // For Page Theme
   if (localStorage.getItem('mode') === null) {
-    modeArr = ['light']
+    modeArr = ['dark']
     localStorage.setItem('mode', JSON.stringify(modeArr))
   } //else{
   //   // JSON.parse(localStorage.getItem('mode'))
