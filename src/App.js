@@ -28,11 +28,7 @@ function App() {
   if (localStorage.getItem('mode') === null) {
     modeArr = ['dark']
     localStorage.setItem('mode', JSON.stringify(modeArr))
-  } //else{
-  //   // JSON.parse(localStorage.getItem('mode'))
-  //   modeArr.push(mode)
-  //   localStorage.setItem('mode',JSON.stringify(modeArr))
-  // } //
+  }
 
   const [mode, setMode] = useState(JSON.parse(localStorage.getItem('mode')).slice(-1).join(''))
 
@@ -61,8 +57,6 @@ function App() {
     setNewsArr(news.data)
   }
 
-
-  const [userName, setUserName] = useState({})  // Register part
   return (
     <ThemeProvider theme={darkTheme}>
       <Box bgcolor={'background.default'} color={'text.primary'} className="App">
@@ -77,10 +71,10 @@ function App() {
               <Route path='/friends' element={<Friends />} />
               <Route path='/settings' element={<Settings />} />
             </Route>
-        </Route>
+          </Route>
           <Route path='/' element={<LayoutForm mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
-            <Route path='/register' element={<Register setUserName={setUserName} userName={userName} />} />
-            <Route path='/login' element={<Login setUserName={setUserName} />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/login' element={<Login />} />
           </Route>
         </Routes>
       </Box>
