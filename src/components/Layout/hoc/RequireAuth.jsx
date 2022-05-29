@@ -7,16 +7,16 @@ const RequireAuth = () => {
     const location = useLocation()
     const { authUser } = useAuth()
 
-    if(localStorage.getItem('storage') === null) {                         // If values from key 'todo' is empty
+    if (localStorage.getItem('storage') === null) {                         // If values from key 'todo' is empty
         storage = []                                                       // Create array 'todo'
-    }else{
+    } else {
         storage = JSON.parse(localStorage.getItem('storage'))                // Rewrite array in 'todo' from local storage
     }
 
-    
-    if(authUser?.user?._tokenResponse?.email){
+
+    if (authUser?.user?._tokenResponse?.email) {
         storage.push(authUser?.user?._tokenResponse?.email)
-        localStorage.setItem('storage',JSON.stringify(storage))
+        localStorage.setItem('storage', JSON.stringify(storage))
     }
     return (
         localStorage.getItem('storage') ? <Outlet /> : <Navigate to='/login' state={{ from: location }} replace />

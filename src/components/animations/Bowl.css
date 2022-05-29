@@ -24,21 +24,25 @@
     animation: animate 5s linear infinite;
 }
 
-@keyframes animate{
-    0%{
+@keyframes animate {
+    0% {
         filter: hue-rotate(0deg);
         transform: rotate(0deg);
     }
-    25%{
+
+    25% {
         transform: rotate(15deg);
     }
-    50%{
+
+    50% {
         transform: rotate(0deg);
     }
-    75%{
+
+    75% {
         transform: rotate(-15deg);
     }
-    100%{
+
+    100% {
         filter: hue-rotate(360deg);
         transform: rotate(0deg);
     }
@@ -83,20 +87,24 @@
     animation: animateFluid 5s linear infinite;
 }
 
-@keyframes animateFluid{
-    0%{
+@keyframes animateFluid {
+    0% {
         transform: rotate(0deg);
     }
-    25%{
+
+    25% {
         transform: rotate(-20deg);
     }
-    50%{
+
+    50% {
         transform: rotate(0deg);
     }
-    75%{
+
+    75% {
         transform: rotate(20deg);
     }
-    100%{
+
+    100% {
         transform: rotate(0deg);
     }
 }
@@ -116,7 +124,7 @@
     position: absolute;
     top: calc(46% + 150px);
     /* left: 50%; */
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: 300px;
     height: 30px;
     background: rgba(0, 0, 0, 0.5);
@@ -124,25 +132,29 @@
     animation: animateShadow 5s linear infinite;
 }
 
-@keyframes animateShadow{
-    0%{
+@keyframes animateShadow {
+    0% {
         transform: translateX(0);
     }
-    25%{
+
+    25% {
         transform: translateX(70px);
     }
-    50%{
+
+    50% {
         transform: translateX(0);
     }
-    75%{
+
+    75% {
         transform: translateX(-70px);
     }
-    100%{
+
+    100% {
         transform: translateX(0);
     }
 }
 
-.bowl__text{
+.bowl__text {
     position: absolute;
     bottom: -50px;
     font-size: 32px;
@@ -151,17 +163,18 @@
     color: #41c1fb;
 }
 
-@keyframes animateText{
-    0%{
+@keyframes animateText {
+    0% {
         filter: hue-rotate(0deg);
     }
-    100%{
+
+    100% {
         filter: hue-rotate(360deg);
     }
 }
 
 @media screen and (max-width:800px) {
-    .bowl__wrapper{
+    .bowl__wrapper {
         display: none;
     }
 }

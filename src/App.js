@@ -1,5 +1,5 @@
 import './App.css'
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material';
 import { Box } from '@mui/system';
 import { Routes, Route } from 'react-router-dom'

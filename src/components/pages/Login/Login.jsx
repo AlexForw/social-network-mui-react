@@ -48,7 +48,7 @@ const Login = () => {
         <Box height='100vh' p={3} sx={{ display: 'flex', justifyContent: 'space-around' }}>
 
             <Bowl title='Login..' />
-            
+
             <Card sx={{ width: '400px', height: '400px', display: 'flex', flexDirection: 'column', gap: 3, borderRadius: '50px', padding: 1.5 }}>
                 <Typography variant='h4' sx={{ textAlign: 'center', marginTop: 5 }}>Login</Typography>
 
@@ -72,13 +72,13 @@ const Login = () => {
                                 }
                             })
                         }} text={'Password..'} icon={<LockOutlinedIcon />} />
-                        
+
                         <Box sx={{ position: 'absolute', left: 25, color: '#ff4040', display: 'flex', alignItems: 'center', gap: 0.5 }}>{errors?.password && <ReportProblemIcon fontSize='small' />} {errors?.password && <Box>{errors?.password?.message || Error}</Box>}</Box>
                     </Box>
 
 
                     <Button type='submit' variant="contained" disabled={!isValid} sx={{ width: '200px', alignSelf: 'center' }}>Sign in</Button>
-                
+
                 </form>
 
                 <Box sx={{ display: 'flex', justifyContent: 'center', color: '#4682B4', fontWeight: '900' }}>

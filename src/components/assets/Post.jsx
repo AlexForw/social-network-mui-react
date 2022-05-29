@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
@@ -21,7 +20,7 @@ const Post = ({ props }) => {
             <CardHeader
                 avatar={
                     <Avatar aria-label="recipe">
-                        {props.author.split(' ')[0].slice(0,1) + props.author.split(' ')[1].slice(0,1)}
+                        {props.author.split(' ')[0].slice(0, 1) + props.author.split(' ')[1].slice(0, 1)}
                     </Avatar>
                 }
                 action={
@@ -41,11 +40,11 @@ const Post = ({ props }) => {
             />
             <CardContent>
                 <Typography variant='h6'>{props.title}</Typography>
-                <Divider sx={{ height:5, m: 0.5 }} orientation="horizontal" />
+                <Divider sx={{ height: 5, m: 0.5 }} orientation="horizontal" />
                 <Typography variant="body2" color="text.secondary">
                     {props.content}
                 </Typography>
-                <IconButton variant='a' sx={{borderRadius:3, mt:2}} target="_blank" href={props.readMoreUrl}>Read more</IconButton>
+                <IconButton variant='a' sx={{ borderRadius: 3, mt: 2 }} target="_blank" href={props.readMoreUrl}>Read more</IconButton>
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="add to favorites">

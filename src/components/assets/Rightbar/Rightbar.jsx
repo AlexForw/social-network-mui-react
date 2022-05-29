@@ -1,5 +1,4 @@
 import { Box } from '@mui/material';
-import React from 'react';
 import ListSocial from '../ListSocial'
 import Avatar from '@mui/material/Avatar';
 import AddIcon from '@mui/icons-material/Add';

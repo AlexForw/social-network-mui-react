@@ -1,7 +1,7 @@
 import './Bowl.css'
 
 
-const Bowl = ({title}) => {
+const Bowl = ({ title }) => {
     return (
         <section className='bowl__wrapper'>
             <div className="bowl__shadow"></div>

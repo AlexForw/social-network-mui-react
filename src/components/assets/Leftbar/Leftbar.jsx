@@ -1,5 +1,4 @@
 import { Box } from '@mui/material';
-import React from 'react';
 import ListSocial from '../ListSocial'
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import NewspaperIcon from '@mui/icons-material/Newspaper';
@@ -21,7 +20,7 @@ const Leftbar = ({ sx }) => {
                     <NavLink to='/'>
                         <ListSocial icon={<NewspaperIcon />} primary='News'></ListSocial>
                     </NavLink>
-                    
+
                     <NavLink to='/messenger'>
                         <ListSocial icon={<ChatBubbleOutlineIcon />} primary='Messenger'></ListSocial>
                     </NavLink>

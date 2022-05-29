@@ -1,5 +1,4 @@
 import { InputBase } from '@mui/material';
-import React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 
 
@@ -44,13 +43,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 
-const Search = ({onChange,icon, text, value, type}) => {
+const Search = ({ onChange, icon, text, value, type, inputValue }) => {
     return (
         <SearchBox>
             <SearchIconWrapper>
                 {icon}
             </SearchIconWrapper>
             <StyledInputBase
+                {...inputValue}
                 type={type}
                 value={value}
                 placeholder={text}

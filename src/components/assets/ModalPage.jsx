@@ -1,4 +1,3 @@
-import React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
@@ -12,6 +11,7 @@ import VideoCameraBackOutlinedIcon from '@mui/icons-material/VideoCameraBackOutl
 import InsertDriveFileOutlinedIcon from '@mui/icons-material/InsertDriveFileOutlined';
 import SendIcon from '@mui/icons-material/Send'
 import Fab from '@mui/material/Fab';
+import { useState } from 'react';
 
 
 
@@ -28,7 +28,7 @@ const style = {
     borderRadius: 5,
 };
 const ModalPage = ({ children }) => {
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
 
@@ -46,35 +46,35 @@ const ModalPage = ({ children }) => {
                     <Typography id="modal-modal-title" variant="h6" component="h2">
                         Create post
                     </Typography>
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, margin:'10px 0 10px 0' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, margin: '10px 0 10px 0' }}>
                         <AccountCircle fontSize='large' />
                         <Typography variant='h6' fontWeight='600'>Your Name</Typography>
                     </Box>
                     <TextField
-                        sx={{width:'100%',maxHeight:'300px'}}
+                        sx={{ width: '100%', maxHeight: '300px' }}
                         id="outlined-multiline-static"
                         multiline
                         rows={4}
                         placeholder="What's new?"
                     />
-                    <Box sx={{ display: 'flex', alignItems: 'center',justifyContent:'space-between', gap: 1, margin:'10px 0 10px 0' }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 1, margin: '10px 0 10px 0' }}>
                         <Box fontSize='large'>
                             <IconButton>
-                                        <SentimentVerySatisfiedIcon />
+                                <SentimentVerySatisfiedIcon />
                             </IconButton>
                             <IconButton>
-                            <PhotoIcon />
+                                <PhotoIcon />
                             </IconButton>
                             <IconButton>
-                                        <VideoCameraBackOutlinedIcon />
+                                <VideoCameraBackOutlinedIcon />
                             </IconButton>
                             <IconButton>
-                                        <InsertDriveFileOutlinedIcon />
+                                <InsertDriveFileOutlinedIcon />
                             </IconButton>
                         </Box>
 
                         <Fab onClick={handleClose}>
-                            <SendIcon/>
+                            <SendIcon />
                         </Fab>
                     </Box>
                 </Box>

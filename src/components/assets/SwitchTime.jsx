@@ -1,4 +1,3 @@
-import React from 'react';
 import { styled } from '@mui/material/styles';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
@@ -50,19 +49,19 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
     },
 }));
 
-const SwitchTime = ({mode, setMode}) => {
-const changeColor = () => {
-    let newModeArr = []
-    newModeArr.push(JSON.parse(localStorage.getItem('mode')).slice(-1).join('') === 'light' ? 'dark' : 'light')
-    localStorage.setItem('mode', JSON.stringify(newModeArr))
-   
-    return JSON.parse(localStorage.getItem('mode')).slice(-1).join('')
-    
-}
+const SwitchTime = ({ mode, setMode }) => {
+    const changeColor = () => {
+        let newModeArr = []
+        newModeArr.push(JSON.parse(localStorage.getItem('mode')).slice(-1).join('') === 'light' ? 'dark' : 'light')
+        localStorage.setItem('mode', JSON.stringify(newModeArr))
+
+        return JSON.parse(localStorage.getItem('mode')).slice(-1).join('')
+
+    }
     return (
         <FormControlLabel
             onChange={() => setMode(changeColor)}
-            control={mode === 'light' ? <MaterialUISwitch /> : <MaterialUISwitch checked/>} // the Moon will defaultChecked
+            control={mode === 'light' ? <MaterialUISwitch /> : <MaterialUISwitch checked />} // the Moon will defaultChecked
         />
     );
 };

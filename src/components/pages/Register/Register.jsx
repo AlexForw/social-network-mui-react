@@ -60,7 +60,7 @@ const Register = () => {
                         <Box sx={{ position: 'absolute', left: 25, color: '#ff4040', display: 'flex', alignItems: 'center', gap: 0.5 }}>{errors?.email && <ReportProblemIcon fontSize='small' />} {errors?.email && <Box>{errors?.email?.message || Error}</Box>}</Box>
                     </Box>
 
-                    
+
                     <Box sx={{ position: 'relative' }}>
                         <Search type='password' inputValue={{
                             ...register('password', {

@@ -1,4 +1,3 @@
-import React from 'react';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import MenuItem from '@mui/material/MenuItem';
@@ -8,10 +7,11 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import SettingsIcon from '@mui/icons-material/Settings';
 import SignOut from './SignOut/SignOut';
 import { Link } from 'react-router-dom'
+import { useState } from 'react';
 
-const AccountIcon = ({hidden}) => {
-    const [anchorEl, setAnchorEl] = React.useState(null);
-    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+const AccountIcon = ({ hidden }) => {
+    const [anchorEl, setAnchorEl] = useState(null);
+    const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
     const isMenuOpen = Boolean(anchorEl);
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
@@ -54,10 +54,10 @@ const AccountIcon = ({hidden}) => {
                 <MenuItem onClick={handleMenuClose}><SettingsIcon /><Box paddingLeft='5px'>Settings</Box></MenuItem>
             </Link>
             <Link to='/login'>
-                <MenuItem onClick={() =>{
+                <MenuItem onClick={() => {
                     SignOut()
                     handleMenuClose()
-                    }}><LogoutIcon /><Box paddingLeft='5px'>Sign out</Box></MenuItem>
+                }}><LogoutIcon /><Box paddingLeft='5px'>Sign out</Box></MenuItem>
             </Link>
         </Menu>
     );

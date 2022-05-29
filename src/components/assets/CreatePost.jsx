@@ -1,4 +1,3 @@
-import React from 'react';
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import Divider from '@mui/material/Divider';
@@ -12,7 +11,7 @@ import { Box } from '@mui/material';
 const CreatePost = () => {
     return (
         <Paper
-            sx={{ p: '2px 4px', display: {xs:'none', sm:'flex'}, alignItems: 'center'}}
+            sx={{ p: '2px 4px', display: { xs: 'none', sm: 'flex' }, alignItems: 'center' }}
         >
             <Box sx={{ p: '10px' }} aria-label="menu">
                 <ModalPage><DownloadIcon /></ModalPage>
