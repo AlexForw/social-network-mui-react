@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/social-network-mui-react/static/css/main.22505a88.css",
-    "main.js": "/social-network-mui-react/static/js/main.c19f45df.js",
+    "main.js": "/social-network-mui-react/static/js/main.ddb0bec2.js",
     "index.html": "/social-network-mui-react/index.html",
     "main.22505a88.css.map": "/social-network-mui-react/static/css/main.22505a88.css.map",
-    "main.c19f45df.js.map": "/social-network-mui-react/static/js/main.c19f45df.js.map"
+    "main.ddb0bec2.js.map": "/social-network-mui-react/static/js/main.ddb0bec2.js.map"
   },
   "entrypoints": [
     "static/css/main.22505a88.css",
-    "static/js/main.c19f45df.js"
+    "static/js/main.ddb0bec2.js"
   ]
 }
