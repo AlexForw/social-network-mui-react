@@ -6,7 +6,7 @@ import { AuthProvider } from './components/context/AuthProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-        <BrowserRouter>
+        <BrowserRouter basename='/social-network-mui-react'>
                 <AuthProvider>
                         <App />
                 </AuthProvider>

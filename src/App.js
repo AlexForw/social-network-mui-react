@@ -65,11 +65,12 @@ function App() {
           <Route element={<RequireAuth />}>
             <Route path='/' element={<Layout mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
               <Route index element={<Home createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} setKindOfNews={setKindOfNews} />} />
-              <Route path='/myprofile' element={<MyProfile />} />
+              <Route path='myprofile' element={<MyProfile />} />
               <Route path='/messenger' element={<Messenger />} />
               <Route path='/groups' element={<Groups />} />
               <Route path='/friends' element={<Friends />} />
               <Route path='/settings' element={<Settings />} />
+              <Route path='*' element={<Home createNews={createNews} kindOfNews={kindOfNews} searchNews={searchNews} newsArr={newsArr} setKindOfNews={setKindOfNews} />} />
             </Route>
           </Route>
           <Route path='/' element={<LayoutForm mode={mode} setMode={setMode} setSearchNews={setSearchNews} />}>
