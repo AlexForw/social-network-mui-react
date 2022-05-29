@@ -63,7 +63,7 @@ const Login = () => {
                     </Box>
 
                     <Box sx={{ position: 'relative' }}>
-                        <Search type='password' inputValue={{
+                        <Search type='text' inputValue={{
                             ...register('password', {
                                 required: 'Field is required',
                                 minLength: {
@@ -71,7 +71,7 @@ const Login = () => {
                                     message: 'Min length 6'
                                 }
                             })
-                        }} text={'Password..'} icon={<LockOutlinedIcon />} />
+                        }} sx={{ fontFamily: 'password' }} text={'Password..'} icon={<LockOutlinedIcon />} />
 
                         <Box sx={{ position: 'absolute', left: 25, color: '#ff4040', display: 'flex', alignItems: 'center', gap: 0.5 }}>{errors?.password && <ReportProblemIcon fontSize='small' />} {errors?.password && <Box>{errors?.password?.message || Error}</Box>}</Box>
                     </Box>

@@ -43,13 +43,14 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 
-const Search = ({ onChange, icon, text, value, type, inputValue }) => {
+const Search = ({ onChange, icon, text, value, type, inputValue, sx }) => {
     return (
         <SearchBox>
             <SearchIconWrapper>
                 {icon}
             </SearchIconWrapper>
             <StyledInputBase
+                sx={sx}
                 {...inputValue}
                 type={type}
                 value={value}
