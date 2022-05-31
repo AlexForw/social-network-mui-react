@@ -1,10 +1,24 @@
 <div align='center'>
 <h1>Shelter - social network</h1>
 
-> GFM  Markdown and WYSIWYG Editor - Productive and Extensible
 
-<a href='https://www.readme-templates.com/'><img src='https://media.giphy.com/media/8XNe0y5DjDOvGcMF7I/giphy.gif' alt='gif' /></a>
-[![github release version](2)](https://github.com/nhn/tui.editor/releases/latest) [![npm version](https://img.shields.io/npm/v/@toast-ui/editor.svg)](https://www.npmjs.com/package/@toast-ui/editor) [![license](https://img.shields.io/github/license/nhn/tui.editor.svg)](https://github.com/nhn/tui.editor/blob/master/LICENSE) [![PRs welcome](https://img.shields.io/badge/PRs-welcome-ff69b4.svg)](https://github.com/nhn/tui.editor/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) [![code with hearth by NHN Cloud](https://img.shields.io/badge/%3C%2F%3E%20with%20%E2%99%A5%20by-NHN_Cloud-ff1414.svg)](https://github.com/nhn)</div>
+<a href='https://t.me/alexforw/'><img src='https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTmGOcrXVOe0QBJeV4FtL96ry9013sIeI4vQm3Nsuy7wJHOF567' alt='telegram' height='35'/></a>
+<a href='https://github.com/AlexForw'><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuCwiWVSs6CacvZrybPFxRJtpw5uXvrmXWmh98vTtDhI8XZXRW' alt='github' height='35'/></a>
+<a href='https://discordapp.com/users/695551759766126602/'><img src='https://www.goha.ru/s/f/NV/7l/zAXAZEPpvt.jpg' alt='discord' height='35'/></a>
 
-<span background='red'>sda</span>
-<div align='center'><img src="https://media.giphy.com/media/grmM3i2wJ5li3w717K/giphy.gif" alt='gif'/></div>
+  
+  
+<div><img src="https://media.giphy.com/media/grmM3i2wJ5li3w717K/giphy.gif" alt='gif'/></div>
+<h2><a href='https://alexforw.github.io/social-network-mui-react/'>Live Demo</a>(email: hello@mail.ru, password: 123456)</h2>
+</div>
+
+## Description
+
+### Shelter - social network was created using:
+<span><img src='https://img.shields.io/badge/-React-05122A?style=flat&logo=react' alt='react' height='25'/></span>
+<span><img src='https://img.shields.io/badge/-Material UI-05122A?style=flat&logo=MUI' alt='MUI' height='25'/></span>
+<span><img src='https://img.shields.io/badge/-React Router-05122A?style=flat&logo=react-router' alt='react router' height='25'/></span>
+<span><img src='https://img.shields.io/badge/-Firebase-05122A?style=flat&logo=firebase' alt='firebase' height='25'/></span>
+<span><img src='https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5' alt='html' height='25'/></span>
+<span><img src='https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6' alt='css' height='25'/></span>
+<span><img src='https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript' alt='js' height='25'/></span>
