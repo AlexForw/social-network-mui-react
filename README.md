@@ -15,10 +15,50 @@
 ## Description
 
 ### Shelter - social network was created using:
-<span><img src='https://img.shields.io/badge/-React-05122A?style=flat&logo=react' alt='react' height='25'/></span>
+<div><span><img src='https://img.shields.io/badge/-React-05122A?style=flat&logo=react' alt='react' height='25'/></span>
 <span><img src='https://img.shields.io/badge/-Material UI-05122A?style=flat&logo=MUI' alt='MUI' height='25'/></span>
 <span><img src='https://img.shields.io/badge/-React Router-05122A?style=flat&logo=react-router' alt='react router' height='25'/></span>
-<span><img src='https://img.shields.io/badge/-Firebase-05122A?style=flat&logo=firebase' alt='firebase' height='25'/></span>
+<span><img src='https://img.shields.io/badge/-React Hook Form-05122A?style=flat&logo=SASS' alt='react hook form' height='25'/></span></div>
+<div><span><img src='https://img.shields.io/badge/-Firebase-05122A?style=flat&logo=firebase' alt='firebase' height='25'/></span>
 <span><img src='https://img.shields.io/badge/-HTML-05122A?style=flat&logo=HTML5' alt='html' height='25'/></span>
 <span><img src='https://img.shields.io/badge/-CSS-05122A?style=flat&logo=CSS3&logoColor=1572B6' alt='css' height='25'/></span>
 <span><img src='https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript' alt='js' height='25'/></span>
+<span><img src='https://img.shields.io/badge/-API-05122A?style=flat&logo=eclipse' alt='API' height='25'/></span></div>
+
+
+### NOW ABOUT FUNCTIONALITY
+
+<img alt="validation auth" src="https://media.giphy.com/media/pMHWjIKPCAHh5ROcuN/giphy.gif" align="right"/>
+
+## Validation & Auth
+
+> The first thing that we see when entering any social network is the registration form.
+
+**Shelter has a simple and understandable registration form which was implemented using:**
+<img align='center' src='https://img.shields.io/badge/-React Hook Form-05122A?style=flat&logo=SASS' alt='react hook form' height='25'/>
+<img align='center' src='https://img.shields.io/badge/-Firebase-05122A?style=flat&logo=firebase' alt='firebase' height='25'/>
+
+
+## News
+<img alt="News" src="https://media.giphy.com/media/TsqWSAnCOD6CFVk8st/giphy.gif" align="right"/>
+  
+> News concerns everyone. News is what takes up most of our time on social media.
+  
+**The Shelter uses a free Hindi's news API, so there may sometimes be technical issues with CORS**
+<img align='center' src='https://img.shields.io/badge/-API-05122A?style=flat&logo=eclipse' alt='API' height='25'/>
+  
+<a href='https://github.com/cyberboysumanjay/Inshorts-News-API'>Link to free Hindi's API</a>
+  
+**If you have problems with downloading News just update page**
+  
+## Routes & Search
+<img alt="Routes Search" src="https://media.giphy.com/media/YGSEnhOiobWel7JsKH/giphy.gif" align="right"/>
+  
+> Modern social networks have many routes leading to various resources.
+  
+**Routes in the Shelter was created using:**
+<img align='center' src='https://img.shields.io/badge/-React Router-05122A?style=flat&logo=react-router' alt='react router' height='25'/>
+
+**Search in the Shelter was created using:**
+<img align='center' src='https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript' alt='js' height='25'/>
+
