@@ -50,11 +50,12 @@
 <a href='https://github.com/cyberboysumanjay/Inshorts-News-API'>Link to free Hindi's API</a>
   
 **If you have problems with downloading News just update page**
-  
+
+
 ## Routes & Search
 <img alt="Routes Search" src="https://media.giphy.com/media/YGSEnhOiobWel7JsKH/giphy.gif" align="right"/>
   
-> Modern social networks have many routes leading to various resources.
+> Modern social networks have many routes leading to various resources. You can also filter your news with Search.
   
 **Routes in the Shelter was created using:**
 <img align='center' src='https://img.shields.io/badge/-React Router-05122A?style=flat&logo=react-router' alt='react router' height='25'/>
@@ -62,3 +63,9 @@
 **Search in the Shelter was created using:**
 <img align='center' src='https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript' alt='js' height='25'/>
 
+
+##
+
+**If you want to watch a bit more functionality you can follow the link**
+
+<a href='https://alexforw.github.io/social-network-mui-react/'>Watch more</a>
