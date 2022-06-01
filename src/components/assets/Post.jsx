@@ -20,7 +20,7 @@ const Post = ({ props }) => {
             <CardHeader
                 avatar={
                     <Avatar aria-label="recipe">
-                        {props.author.split(' ')[0].slice(0, 1) + props.author.split(' ')[1].slice(0, 1)}
+                        {props.author.split(' ')[0]?.slice(0, 1) + props.author.split(' ')[1]?.slice(0, 1)}
                     </Avatar>
                 }
                 action={
