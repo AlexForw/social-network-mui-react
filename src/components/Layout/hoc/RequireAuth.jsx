@@ -7,10 +7,10 @@ const RequireAuth = () => {
     const location = useLocation()
     const { authUser } = useAuth()
 
-    if (localStorage.getItem('storage') === null) {                         // If values from key 'todo' is empty
-        storage = []                                                       // Create array 'todo'
+    if (localStorage.getItem('storage') === null) {                        
+        storage = []                                                       
     } else {
-        storage = JSON.parse(localStorage.getItem('storage'))                // Rewrite array in 'todo' from local storage
+        storage = JSON.parse(localStorage.getItem('storage'))                
     }
 
 
